@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chesh box</title>
+    <style>
+        #demo1 {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            display: inline-block;
+            padding: 0px;
+            margin: -2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 align="center">Chesh box</h2>
+    <!-- <div id="demo1"></div> -->
+
+    <button onclick="myFunction()">Click me</button>
+    <p id="demo"></p>
+
+    <script>
+        // let n;
+        // while (true) {
+        //     let input = prompt("Enter a number");
+        //     n = parseInt(input);
+
+        //     if (!isNaN(n)) {
+        //         break; // Exit the loop if a valid number is entered
+        //     } else {
+        //         alert("Please enter a valid number.");
+        //     }
+        // }
+
+
+        // for (let i = 1; i <= n; i++) {
+        //     for (let j = 1; j <= n; j++) {
+        //         console.log()
+        //         if ((i + j) % 2 === 0) {
+        //             document.write("<div style='background-color :black'> </div>")
+        //         } else {
+        //             document.write("<div style='background-color :white'> </div>")
+        //         }
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // // listing in array element;
+
+        // const arr = ["chai", "cofee", "salt", "Mango"];
+
+        // let text = "<ul>";
+        // for (let i = 0; i < arr.length; i++) {
+        //     text += "<li>" + arr[i] + "</li>";
+        // }
+        // text += "</ul>";
+        // document.getElementById("demo").innerHTML = text;
+
+
+        //  // //  add element in array and listing using function
+
+        const name = ["Man", "Jan", "Tan"];
+        let input;
+
+        function myFunction() {
+            input = "";
+            input = "<ul>"
+            name.push("jay");
+            for (let i = 0; i < name.length; i++) {
+                input += "<li>" + name[i] + "</li>"
+            }
+            input += "</ul>";
+            document.getElementById("demo").innerHTML = input;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

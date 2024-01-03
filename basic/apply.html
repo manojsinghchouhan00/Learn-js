@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inpage</title>
+    <script src="external.js"></script>
+
+</head>
+
+<body>
+    <h1 id="demo">javascript</h1>
+    <button onclick="main()">click</button>
+    <script>
+        function* innerGenerator() {
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+
+        function* outerGenerator() {
+            yield* innerGenerator();
+        }
+
+        const generator = outerGenerator();
+
+        console.log(generator.next().value);
+        console.log(generator.next().value);
+        console.log(generator.next().value);
+    </script>
+</body>
+
+</html>

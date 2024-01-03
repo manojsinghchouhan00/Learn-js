@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./js-image/img.jpg">
+    <title>JavaScript</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 25px;
+            font-family: system-ui;
+        }
+
+        .container {
+            border: 1px solid black;
+            margin: 0px;
+            padding: 2px;
+
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid gray;
+            margin: 20px;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+
+        /* table tbody tr:nth-child(odd) {
+            background-color: #95e497;
+        }
+        table thead tr:nth-child(odd) {
+            background-color: #b8c0a7;
+        } */
+        table {
+            background-color: #b0eff5;
+
+        }
+
+        tr:hover {
+            background-color: rgb(202, 124, 95);
+        }
+
+        .day {
+            border: 1px solid rgb(236, 106, 106);
+            margin: 0px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="day">
+
+            <h3>What is JavaScript??</h3>
+            <p> JavaScript is a lightweight object oriented programming language. <br>
+                Which is used to sevral website for scripting webpage. <br>
+                It is interpreted full-fledge programming language.
+                That enable danamic intractivity on website when applied to html document.
+
+                <!-- cross-platform, single-threaded, and interpreted compiled programming language. It is also known as the scripting language for webpages. It is well-known for the development of web pages, and many non-browser environments also use it. -->
+            </p>
+            <h3>Why js born??</h3>
+            <p>
+                To create intractive website like:- <br>
+                (1) Client-side validation <br>
+                (2) Server-side validation <br>
+                (3) Popup <br>
+                (4) Events and many more...
+            </p>
+
+            <h3>Where use JavaScript??</h3>
+            <p>
+                * Client-side <br>
+                * Server-side <br>
+                * Mobile development <br>
+                * Software development <br>
+
+
+                JavaScript is a weakly typed language (dynamically typed). JavaScript can be used for Client-side
+                developments
+                as well as Server-side developments. JavaScript is both an imperative and declarative type of language.
+                JavaScript contains a standard library of objects, like Array, Date, and Math, and a core set of
+                language elements like operators, control structures, and statements.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Version</th>
+                        <th>Name</th>
+                        <th>Release Year</th>
+                        <th>Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ES1</td>
+                        <td>ECMAScript 1</td>
+                        <td>1997</td>
+                        <td>Initial Release</td>
+                    </tr>
+                    <tr>
+                        <td>ES2</td>
+                        <td>ECMAScript 2</td>
+                        <td>1998</td>
+                        <td>Minor Editorial Changes</td>
+                    </tr>
+                    <tr>
+                        <td>ES3</td>
+                        <td>ECMAScript 3</td>
+                        <td>1999</td>
+                        <td>Add :
+                            <ul>
+                                <li>Regular Expression</li>
+                                <li>Exception Handling</li>
+                                <li>switch case and do-while</li>
+                                <li>try/catch</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES4</td>
+                        <td>ECMAScript 4</td>
+                        <td>Abandoned due to conflicts</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>ES5</td>
+                        <td>ECMAScript 5</td>
+                        <td>2009</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>JavaScript “strict mode”</li>
+                                <li>JSON support</li>
+                                <li>JS getters and setters</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES6</td>
+                        <td>ECMAScript 2015</td>
+                        <td>2015</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>let and const</li>
+                                <li>Class declaration</li>
+                                <li>import and export</li>
+                                <li>for..of loop</li>
+                                <li>Arrow functions</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES7</td>
+                        <td>ECMAScript 2016</td>
+                        <td>2016</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>Block scope for variable</li>
+                                <li>async/await</li>
+                                <li>Array.includes function</li>
+                                <li>Exponentiation Operator</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES8</td>
+                        <td>ECMAScript 2017</td>
+                        <td>2017</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>Object.values</li>
+                                <li>Object.entries</li>
+                                <li>Object.getOwnPropertiesDescriptors</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES9</td>
+                        <td>ECMAScript 2018</td>
+                        <td>2018</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>spread operator</li>
+                                <li>rest parameters</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES10</td>
+                        <td>ECMAScript 2019</td>
+                        <td>2019</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>Array.flat()</li>
+                                <li>Array.flatMap()</li>
+                                <li>Array.sort is now stable</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES11</td>
+                        <td>ECMAScript 2020</td>
+                        <td>2020</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>BigInt primitive type</li>
+                                <li>nullish coalescing operator</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES12</td>
+                        <td>ECMAScript 2021</td>
+                        <td>2021</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>String.replaceAll() Method</li>
+                                <li>Promise.any() Method</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES13</td>
+                        <td>ECMAScript 2022</td>
+                        <td>2022</td>
+                        <td>
+                            Added :-
+                            <ul>
+                                <li>Top-level await</li>
+                                <li>Static block inside classes</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ES.Next</td>
+                        <td></td>
+                        <td></td>
+                        <td>Dynamic name for upcoming versions</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>What is ECMA??</h3>
+            <p>European Computer Manufacturer's Association <br>
+                ECMA is a organization to create a standard for technologies. It is provide rule, details and guideline.
+                <br>
+                The ECMAScript specification is a standardized specification of a scripting language developed by
+                Brendan
+                Eich of Netscape; initially named Mocha, then LiveScript, and finally JavaScript.
+            </p>
+
+            <h3>How to Add JavaScript in HTML Document ??</h3>
+            (1). Inpage / Internal <br>
+            (2). External
+
+        </div>
+
+        <div class="day">
+
+            <h3>What is JavaScript Comments??</h3>
+            <p>
+                (1) Single line comment. <br>
+                (2) Multiline comment.
+            </p>
+            <hr>
+            <h3>What is JavaScript Statements??</h3>
+            <p>
+                The javascript program is a set of intruction / list of instructions also called statement.
+            </p>
+            <!-- The programming instructions written in a program. A programming language are known as statements. The order of
+        execution of Statements is the same as they are written. -->
+
+            <h4>1. Semicolons:</h4>
+            Semicolons separate ==> js statements.
+            A semicolon ==> end the statement .
+
+            <h4>2. Code Blocks:</h4>
+            Js statements can be grouped together ==> curly brackets. <br>
+            Grouping ==> purpose ==> Executed together.
+
+            <h4>3. White Space:</h4>
+            Javascript ignores multiple white spaces.
+            <h4>4. Line Length and Line Breaks: </h4>
+            Javascript code’s preferred line length ==> 80 characters.
+            <!-- The best place to break a  code line in Javascript, if it doesn’t fit, is after an operator. -->
+            <h4>5. Keywords: </h4>
+            Keywords ==> reserved words for Js. cannot be used as a variable name.
+
+            <h3> What is JavaScript Syntax??</h3>
+            JavaScript Syntax is used to define the set of rules. <br>
+            <dl>
+                <dt><b>Syntax :- </b></dt>
+                <dd>console.log("Basic Print method in JavaScript on console");</dd>
+                <dd>document.write("Basic Print method in JavaScript on Html document");</dd>
+
+                <dt><b>Variable declaration :-</b></dt>
+                <dd> let c, d, e;</dd>
+                <dt><b>Assign value to the variable :-</b></dt>
+                <dd>c = 5;</dd>
+                <dt><b>Computer value of variables :-</b></dt>
+                <dd>d = c;</dd>
+                <dd>e = c/d;</dd>
+            </dl>
+
+            <h3>What is JavaScript varriable??</h3>
+            A JavaScript variable is the simple name of the storage location where data is stored. There are two types
+            of
+            variables :- <br>
+            <b>Local variables</b>: Declare a variable inside of a block or function. <br>
+            <b>Global variables</b>: Declare a variable outside function or with a window object.
+
+            <ul>
+                There are some basic rules to declare a variable in JavaScript:
+                <li>These are case-sensitive</li>
+                <li>Can only begin with a letter, underscore(“_”) or “$” symbol </li>
+                <li>It can contain letters, numbers, underscore, or “$” symbol</li>
+                <li>A variable name cannot be a reserved keyword.</li>
+            </ul>
+            <p>
+                * JavaScript is a dynamically typed language so the type of variables is decided at runtime. Four ways
+                to
+                define varriable??
+                <br>
+                a= "HTML" <br>
+                var b = "CSS"; <br>
+                let c = "javascript"; <br>
+                const d = "JAVa"; <br> <br>
+                <b>Diffrence between let, var and const??</b>
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>var</th>
+                        <th>let</th>
+                        <th>const</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scope</td>
+                        <td>Function scoped</td>
+                        <td>Block scoped</td>
+                        <td>Block scoped</td>
+                    </tr>
+
+                    <!-- <tr>
+                        <td>Updation</td>
+                        <td>Mutable</td>
+                        <td>Mutable</td>
+                        <td>Immutable</td>
+                    </tr> -->
+                    <tr>
+                        <td>Redeclaration</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Re-Assign</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Hoisting</td>
+                        <td>Hoisted at top</td>
+                        <td>No Hoisted</td>
+                        <td>No Hoisted</td>
+                    </tr>
+                    <tr>
+                        <td>Origins</td>
+                        <td>Pre ES2015</td>
+                        <td>ES2015(ES6)</td>
+                        <td>ES2015(ES6)</td>
+                    </tr>
+                    <tr>
+                        <td>Support</td>
+                        <td>Supported in the old version of Browser</td>
+                        <td>Not supported in the old version of the Browser</td>
+                        <td>Not supported in the old version of the Browser</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Therefore there is no need to explicitly define the type of a variable. We can declare variables in JavaScript in three ways: -->
+            There are majorly two types of languages.
+            <p> <b> Statically typed language :- </b> Where each variable and expression type is already known at
+                compile
+                time. Once a variable is declared to be
+                of a certain data type, it cannot hold values of other data types. <br>
+                Example: C, C++, Java.
+            </p>
+            <p>
+                <b>Dynamically typed languages:-</b>These languages can receive different data types over time. In this
+                type
+                of language, we don’t need to specify whether the value in the variable is an integer, string, or any
+                other
+                data type like float, double, etc. The JavaScript Engine automatically understands the data type. We can
+                re-assign any variable with any other value having another data type as given below. <br>
+                Example: Ruby, Python, JavaScript
+            </p>
+            <p>
+            <h3>What is Datatypes in JavaScript??</h3>
+
+            Datatype are two type :- (1). Primitive(predefined). (2). NonPrimitive(Reference)
+            </p>
+            <dl>
+                <dt>(A). Primitive DataTypes :-</dt>
+                <dd>1. Number (Decimal (float), Integer)</dd>
+                <dd>2. String (sequence of characters )</dd>
+                <dd>3. Undefined (value is not assigned)</dd>
+                <dd>4. Boolean (true and false.)</dd>
+                <dd>5. Null (only one possible value that is null.) </dd>
+                <dd>6. BigInt (numbers greater than 2<sup>53</sup>-1 ) </dd>
+                <dd>7. Symbol (used to create objects==>always be unique created using Symbol constructo) </dd>
+                <dt>(B). Non-primitive DataTypes :- </dt>
+                <dd>- The data types that are derived from primitive data types</dd>
+                <dd>1. Object (Having properties and methods)</dd>
+                <dd>2. Array (we can store more than one element under a single name.)</dd>
+            </dl>
+            <!-- How to write data type -->
+            <dl>
+                <dt>How to write DataTypes in javascript??</dt>
+                <dd>1. var x = 10 ; // (Number)</dd>
+                <dd>2. var x = "I am string" ; // (String) </dd>
+                <dd>3. var x ; // (Undefined) </dd>
+                <dd>4. var x = null ; // (Null)</dd>
+                <dd>5. var x = true ; // (Boolean)</dd>
+                <dd>6. var x = {name : "jay",age : 23, email : j@gmail.com} ; // (Object)</dd>
+                <dd>7. var x =[ 1, 2, 3, 4, 5, "jay", "rupa", true ] ; // (Array)</dd>
+                <dd>8. var d = new Date("2022-03-25");</dd>
+            </dl>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Primitive</th>
+                        <th>Non-Primitive</th>
+                    </tr>
+                </thead>
+
+                <body>
+                    <tr>
+                        <td>Primitive Data types are predefined.</td>
+                        <td>Non-Primitive data types are created by the programmer</td>
+                    </tr>
+                    <tr>
+                        <td>Primitive Data types will have certain values.</td>
+                        <td>Non-Primitive data types can be NULL.</td>
+                    </tr>
+                    <tr>
+                        <td>Size depends on the type of data structure.</td>
+                        <td>Size is not fixed</td>
+                    </tr>
+                    <tr>
+                        <td>Examples are numbers and strings.</td>
+                        <td>Examples are Array and Linked List.</td>
+                    </tr>
+                    <tr>
+                        <td>It can start with a lowercase.</td>
+                        <td>It can start with uppercase.</td>
+                    </tr>
+                </body>
+            </table>
+            <dl>
+                <h3>JavaScript Output</h3>
+                <dt>JavaScript Output defines the ways to display the output of a given code. </dt>
+                <dd>-(1). innerHTML :- document.getElementById("id").innerHTML;</dd>
+                <dd>-(2). document.write(): Used ==> testing purpose.and Syntax ==> document.write()</dd>
+                <dd>-(3). window.alert(): Display content ==> alert box. Syntax ==> window.alert("Career-Inspire on
+                    documents"); </dd>
+                <dd>-(4). console.log(): Used ==> debuggingAnd Syntax==> console.log("CareerInspire on conole") </dd>
+                <dd>-(5). window.prompt() :- Take input from user. Syntax ==> window.prompt("Enter input") </dd>
+                <dd>-(6). window.confirm() :- Confirmation by user. Syntax ==> window.confirm("Enter input") </dd>
+
+                <dd>-(7). console.error("Somethig else error"): Used ==> debuggingAnd Syntax==> show red color on
+                    console </dd>
+                <dd>-(8). console.warn("Somethig else error"): Used ==> debuggingAnd Syntax==> show green color on
+                    console </dd>
+                <dd>-(9). console.clear(): Used ==> debuggingAnd Syntax==> console clean </dd>
+                <dd>-(10). console.time("testing"): Used ==> debuggingAnd Syntax==> testing </dd>
+                <dd>-(11). console.timeEnd("testing"): Used ==> debuggingAnd Syntax==> testing(time :- 0.05ms )</dd>
+            </dl>
+            what is if, if-else statement ??
+        </div>
+        <div class="day">
+            <h3>What is JavaScript Operators??</h3>
+            <p>JavaScript operators perform the operation between two or more operands.</p>
+            <ul>
+                JavaScript Operators: There are various operators supported by JavaScript.
+
+                <li>JS Arithmetic Operators :- + , - , * , / , % , ** , ++ , -- </li>
+                <li>JS Assignment Operators :- = , += , -= , /= , *= , %= , **= </li>
+                <li>JS Comparison Operators :- == , === , != , !==, &lt; , > , &lt;=, >= </li>
+                <li>JS Logical Operators :- && , || , ! ,</li>
+                <li>JS Ternary Operators :- (condition) ? "true" : "false";</li>
+                <li>JS Bitwise Operators :- & , |, ~, ^ (XOR) , &lt;&lt; (left shift) , &gt;&gt; (right shift), >>>
+                    (unsigned right shift)</li>
+                <li>JS typeof Operator :- It returns the data type of its operand </li>
+                <li>JS Bitwise Assignment Operators :- &= , |= , ^= </li>
+                <li>JS Shift Assignment Operators :- &lt;&lt;= , >>= , >>>= </li>
+                <li>JS Logical Assignment Operators :- &&=, ||=,</li>
+
+                <li>
+                    Nullish coalescing assignment operator :- first value is undefined or null, the second value is
+                    assigned. <br>
+                    let x; <br> x ??= 5;
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="day">
+            <h3>What is javascript String??</h3>
+            <p>
+                JavaScript String Object is a <u>sequence of characters</u>. It contains zero or more characters within
+                <u>single or
+                    double quotes</u>. <br>
+                const name = "String Content"; <br>
+                const str = new String("career-inspire"); <br><br>
+                const str1 = new String("vijay dinanath chouhan");<br>
+                const str2 = "vijay dinanath chouhan";<br>
+                console.log(str1 == str2); output :- true<br>
+                console.log(str1 === str2); output :- false<br> <br><br>
+                <b>
+                    name.length <br>
+                    name.slice(start, end) (2),(2, 4) ,(-10),(-9,-6)<br>
+                    name.substring(start, end) <br>
+                    name.substr(start, length) <br>
+                    name.replace("a","@") <br>
+                    name.replaceAll("a","@") <br>
+                    name.toUpperCase() <br>
+                    name.toLowerCase() <br>
+                    name.concat(" ","string-2") <br>
+                    name.trim() <br>
+                    name.trimStart() <br>
+                    name.trimEnd() <br>
+                    <!-- name.padStart(4,"x") <br>
+                    name.padEnd(4,"0") <br> -->
+                    name.charAt(positionIndex) <br>
+                    name.charCodeAt(positionIndex) <br>
+                    name.split(" ") <br>
+                </b>
+            </p>
+        </div>
+        <div class="day">
+
+            <h3>What is loop in javascript??</h3>
+            <ul>
+                <b>A for loop is used when you know how many times you need to repeat a certain block of code. It takes
+                    three statements.</b> <br>
+                <li> Initialization statement </li>
+                <li> Condition Statement </li>
+                <li> Increment statement. </li>
+                if , if-else , for, for-in, for-of, while, do-while, forEach, and map
+            </ul>
+        </div>
+        <!-- let i = 0;
+        while (i < 6) { 
+            console.log(i);
+             i++; 
+        } -->
+        <!-- const obj = {a: 1, b: 4, c: 7};
+
+        for (let x in obj) {
+        console.log(x + ': ' + obj[x]);
+        } -->
+        <!-- const arr = [1, 2, 3];
+
+        for (let val of arr) {
+        console.log(val);
+        } -->
+
+        <!-- const arr = [1, 2, 3];
+        arr.forEach(val => console.log(val)); -->
+
+        <!-- const arr = [1, 2, 3];
+        const newArr = arr.map(val => val * 2);
+        console.log(newArr); -->
+
+
+        <!-- Array manipulation -->
+        <div class="day">
+            <h3>JavaScript Arrays</h3>
+            <p>JavaScript Array is a single variable that is used to store elements of different data types. JavaScript
+                arrays are zero-indexed. <br>
+                Two ways to declare an array. <br>
+                (1). Array literal :- let arrayName = [value1, value2, ...]; <br>
+                (2). Using new keyword :- let arr = new Array();
+            </p>
+            <p>
+                Array.length <br>
+                Array.toString() <br>
+                Array.pop() <br>
+                Array.push("val-last") <br>
+                Array.shift() <br>
+                Array.unshift("val-first") <br>
+                Array.join("-") <br>
+                Array.delete() :- delete array[0];<br>
+                Array.concat(array2) <br>
+                Array.flat() :- [[1,2],[3,4],[5,6]] ==> [...]<br>
+                Array.splice(2, 0, "val1", "val2") <br>
+                Array.slice(0,1) <br>
+            </p>
+        </div>
+        <!-- Object manipulation -->
+        <div class="day">
+            <h3>What is javascript object??</h3>
+            <p>
+                Objects, in JavaScript, are the most important data type and form the building blocks for modern
+                JavaScript.
+            </p>
+            <h4>
+                1. Object Literal <br>
+                2. Object Constructor
+            </h4>
+            1. let object_name = {
+            key_name : "value",
+            ...
+            } <br><br>
+            2. const object1 = new Object(); <br> <br>
+
+
+
+            let school = { <br>
+            name : "Vivekanada", <br>
+            location : "Delhi", <br>
+            established : 1971, <br>
+            displayinfo : function() { <br>
+            console.log(`${school.name} was established <br>
+            in ${school.established} at ${school.location}`); <br>
+            } <br>
+
+            }
+        </div>
+        <!-- math method -->
+        <div class="day">
+            <h3>What is math() method??</h3>
+            <p>The Javascript Math object is used to perform mathematical operations on numbers.</p>
+            <p>
+                Methods <br>
+                Math.abs() <br>
+                <!-- Math.acos() <br>
+            Math.acosh() <br>
+            Math.asin() <br> 
+            Math.asinh() <br>
+            Math.atan() <br>
+            Math.atan2() <br>
+            Math.atanh() <br> -->
+                Math.cbrt() <br>
+                Math.ceil() <br>
+                <!-- Math.clz32() <br>
+            Math.cos() <br>
+            Math.cosh() <br> -->
+                Math.exp() <br>
+                <!-- Math.expm1() <br> -->
+                Math.floor() <br>
+                <!-- Math.fround() <br> -->
+                <!-- Math.hypot() <br> -->
+                <!-- Math.imul() <br> -->
+                Math.log() <br>
+                Math.log10() <br>
+                Math.log1p() <br>
+                Math.log2() <br>
+                Math.max() <br>
+                Math.min() <br>
+                Math.pow() <br>
+                Math.random() <br>
+                Math.round() <br>
+                <!-- Math.sign() <br>
+            Math.sin() <br>
+            Math.sinh() <br> -->
+                Math.sqrt() <br>
+                <!-- Math.tan() <br>
+            Math.tanh() <br>
+            Math.trunc() <br> -->
+            </p>
+            <p id="math-1"></p>
+            <p id="math-2"></p>
+        </div>
+
+        <!-- Jvascript function -->
+        <div class="day">
+            <h3>What is javascript functions??</h3>
+            <blockquote>
+                Function :- One of the fundamental building blocks in JavaScript. <br>
+                Function has a set of statements that performs a task. <br>
+                Js function are used to perform the operation we can call the function many time. <br>
+                <b>Syntax :- </b> <br>
+                <blockquote>
+                    function functionName(parameters){ <br>
+                    ...peace of code... <br>
+                    } <br><br>
+                    <!-- const x = function (a, b) { <br>
+                        return a * b <br>
+                     }; -->
+                </blockquote>
+                * Function hoisting??? <br>
+                square(5) // 25 <br>
+
+                function square(n) {
+                return n * n;
+                } <br><br>
+
+                <h3>Function declaration</h3>
+                function person() { } <br>
+                let person = person() <br>
+
+                <!-- <h4>Printing the return value of the person() function</h4> -->
+
+                console.log(person) // Undefined <br><br>
+
+                function person1(name) { <br>
+                return name;<br>
+                } <br>
+
+                console.log(person1) // Aayush<br>
+                let person1 = person1("Aayush") <br>
+                <h3>Function Constructor:-</h3>
+                let person = new Person();
+                <br><br>
+                <h5>Creating the Constructor function</h5>
+                function Person(name, age) { <br>
+                this.name = name; <br>
+                this.age = age; <br>
+                } <br><br>
+
+                // Calling the function <br>
+                let person = new Person("Vikah", 22); <br><br>
+
+                console.log(person.name); <br>
+                console.log(person.age); <br>
+
+                <h3>Anonymous fuction??</h3>
+                <h3>Return type fuction??</h3>
+                <h3>IIFC type fuction??</h3>
+
+            </blockquote>
+        </div>
+
+        <!-- OOPs concept -->
+        <div class="day">
+            <h3>Introduction to Object Oriented Programming in JavaScript??</h3>
+            OOPs Concept :- DRY CONCEPT <br>
+            example “a car” is a real-life Object, which has some characteristics like color, type, model, and
+            horsepower and performs certain actions like driving.<br>
+            classes of car :- Mahendra, tesla, Hundoi , Maruti Suzooki... <br>
+            Object :- An Object is a unique entity that contains <b>properties </b> and <b> methods</b>
+
+
+            <ul>
+                <li> Classes :- Classes are blueprints of an Object. A class can have many Objects.
+                </li>
+                <li> Object :- An Object is an instance of a class. Objects are everywhere in JavaScript
+                </li>
+                <ul>Four piller of OOPs
+                    <li>1. Encapsulation :- The process of wrapping properties and functions within a single unit is
+                        known as encapsulation.
+                    </li>
+                    <li>2. Abstraction :- Abstraction means displaying only essential information and hiding the
+                        details.
+                    </li>
+                    <li>3. Inheritance :- It is a concept in which some properties and methods of an Object are being
+                        used by another Object. Unlike most of the OOP languages where classes inherit classes,
+                        JavaScript Objects inherit Objects i.e. certain features (property and methods) of one object
+                        can be reused by other Objects.
+                    </li>
+                    <li>4. Polymorphism :- Polymorphism is one of the core concepts of object-oriented programming
+                        languages. Polymorphism means the same In real life, for example, a boy at the same time may be
+                        a student, a class monitor, etc. So a boy can perform different operations at the same time.
+                        Polymorphism can be achieved by <b>method overriding</b> and <b>method overloading</b>
+                    </li>
+                </ul>
+            </ul>
+
+        </div>
+
+
+    </div>
+    <script>
+        document.getElementById("math-1").innerHTML =
+            "<p><b>Math.abs(-4.7):</b> " + Math.abs(-4.7) + "</p>" +
+            "<p><b>Math.ceil(4.4):</b> " + Math.ceil(4.4) + "</p>" +
+            "<p><b>Math.floor(4.7):</b> " + Math.floor(4.7) + "</p>" +
+            "<p><b>Math.sin(90 * Math.PI / 180):</b> " +
+            Math.sin(90 * Math.PI / 180) + "</p>" +
+            "<p><b>Math.min(0, 150, 30, 20, -8, -200):</b> " +
+            Math.min(0, 150, 30, 20, -8, -200) + "</p>" +
+            "<p><b>Math.random():</b> " + Math.random() + "</p>";
+
+
+        document.getElementById("math-2").innerHTML =
+            // "Math.LN10: " + Math.LN10 + "<br>" +
+            // "Math.LOG2E: " + Math.LOG2E + "<br>" +
+            // "Math.Log10E: " + Math.LOG10E + "<br>" +
+            "Math.SQRT2: " + Math.SQRT2 + "<br>" +
+            "Math.SQRT1_2: " + Math.SQRT1_2 + "<br>" +
+            "Math.LN2: " + Math.LN2 + "<br>" +
+            "Math.E: " + Math.E + "<br>" +
+            "Math.PI: " + Math.PI;
+
+    </script>
+</body>
+
+</html>
