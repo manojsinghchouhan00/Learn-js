@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: system-ui;
+  word-wrap: break-word;
+}
+body {
+  margin: 0;
+}
+.container {
+  border: 1px solid black;
+  margin: 0px;
+  padding: 2px;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+/* start Navigation bar */
+.nav-main {
+  position: sticky;
+  top: -10px;
+  width: 100%;
+  float: inline-end;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  background-color: #00000020;
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+#navbar li {
+  display: inline-block;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: white;
+  padding: 2px;
+  display: inline-block;
+  margin: 3px;
+  font-size: 15px;
+}
+
+a:link {
+  background-color: #ee82ee10;
+}
+
+a:hover {
+  background-color: #0000ff40;
+}
+
+a:active {
+  background-color: red;
+}
+/* End Navigation bar */
+
+table,
+tr,
+td,
+th {
+  border: 1px solid gray;
+  margin: 5px;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+/* table tbody tr:nth-child(odd) {
+    background-color: #95e497;
+}
+table thead tr:nth-child(odd) {
+    background-color: #b8c0a7;
+} */
+table {
+  background-color: #b0eff5;
+  width: 80%;
+}
+
+tr:hover {
+  background-color: rgb(202, 124, 95);
+}
+
+.day {
+  border: 1px solid rgb(236, 106, 106);
+  margin: 0px;
+  padding: 10px;
+}
+
+::selection {
+  color: red;
+  background-color: #19db4a8a;
+}
+@media screen and (max-width: 500px) {
+  * {
+    box-sizing: border-box;
+    font-size: 11px;
+    font-family: system-ui;
+    word-wrap: break-word;
+  }
+}

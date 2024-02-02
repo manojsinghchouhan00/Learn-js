@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* first logic */
+        button {
+            /* background-color: blueviolet; */
+            border: none;
+            padding: 15px;
+            margin: 50px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        #image-1{
+            width: 200px;
+        }
+        
+      
+    </style>
+</head>
+
+<body>
+    <div align="center" class="first">
+        <h1>How to change html attribute with javascript??</h1>
+        <img src="../js-image/pic_bulboff.gif" alt="Off image" id="image-1"> <br>
+        <button onclick="onbulb()" id="active-1">Bulb ON</button>
+        <button onclick="offbulb()" id="active-2">Bulb OFF</button>
+    </div>
+
+    <script>
+        function onbulb() {
+            document.getElementById("image-1").src = "../js-image/pic_bulbon.gif"
+            document.getElementById("active-1").style.color="red"
+            document.getElementById("active-2").style.color="blue"
+            // window.print()
+        }
+        function offbulb() {
+            let a = document.getElementById("image-1").src = "../js-image/pic_bulboff.gif"
+            document.getElementById("active-1").style.color="blue"
+            document.getElementById("active-2").style.color="red"
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser object model</title>
+</head>
+
+<body>
+    <div>
+        <h1>Introdaction to BOM</h1>
+        <p>
+            Browser Object Model (BOM) allows JavaScript to "INTRACT WITH" the browser. <br>
+            The Browser Object Model (BOM) is a collection of objects exposed by the browser that allow JavaScript to
+            interact with the browser window, document, and other browser-specific functionalities. The BOM includes
+            objects such as Window, Navigator, Location, History, and Screen.
+            <img src="../js-image/bom.jpg" alt="">
+        </p>
+        <h2>The Window Object</h2>
+        <p>
+            The window object is supported by all browsers. It represents the browser's window. <br>
+            <br>
+            All global JavaScript objects, functions, and variables automatically become members of the window object.
+            <br>
+            <br>
+            Global variables are properties of the window object. <br>
+            <br>
+            Global functions are methods of the window object. <br><br>
+
+            Even the document object (of the HTML DOM) is a property of the window object:- <br><br>
+            Ex. :- window.document.getElementById("header");
+        </p>
+        <h3>Window Size</h3>
+        <p>
+            Two properties can be used to determine the size of the browser window. <br><br>
+            the inner/outer height/width of the browser window (in pixels) <br><br>
+            window.innerHeight <br>
+            window.outerHeight <br>
+            window.innerWidth <br>
+            window.outerWidth <br> <br>
+
+            Some other methods:<br><br>
+
+            window.open() - open a new window<br>
+            window.close() - close the current window<br>
+            window.moveTo() - move the current window (Absolute)<br>
+            window.moveBy() - move the current window (Relative)<br>
+            window.resizeTo() - resize the current window (Absolute)<br>
+            window.resizeBy() - resize the current window (Relative)<br>
+        </p>
+        <div class="ex">
+            &lt;body onresize="resizeBody()"&gt; <br>
+            &nbsp; function resizeBody(){ <br>
+            &nbsp; &nbsp; var height = window.innerHeight; <br>
+            &nbsp; &nbsp; var width = window.innerWidth; <br>
+            &nbsp; &nbsp; console.log("height :-",height," Width :-",width) <br>
+            &nbsp; } <br>
+            &lt;/body&gt; <br>
+        </div>
+        <h3>Window open()</h3>
+        <div>
+            window.open(URL, name, specs, replace) <br>
+            window.open("https://www.fb.com", "facebook", "width=100,height=100,left=200,top=200") <br>
+            window.open("index.html", "", "width=100,height=100,left=200,top=200") <br> <br>
+
+            <b> url </b>:- Open new window page. <br>
+            <b> name</b> :- name , _blank , _self , _parent , _top <br>
+            <b> specification</b> :- width , hight , left ,top..... <br>
+            <b> replace</b> :- <b>true</b> :- URL replaces the current document in the history list, <b>false</b> :- URL
+            creates a new entry in the history list. (some browser provide error apply this parameter)
+        </div>
+        <div class="ex">
+
+            &lt;body&gt; <br>
+            &nbsp; &lt;h1&gt; Window Object :- open() and close() Methods&lt;/h1&gt; <br>
+            &nbsp; &lt;button onclick="openWin()"&gt;Open "myWindow"&lt;/button&gt; <br>
+            &nbsp; &lt;button onclick="closeWin()"&gt;Close "myWindow"&lt;/button&gt; <br>
+            &nbsp; &lt;script&gt; <br>
+            &nbsp; &nbsp; let myWindow; <br>
+            &nbsp; &nbsp; function openWin() { <br>
+            &nbsp; &nbsp; &nbsp; myWindow = window.open("", "", "width=200,height=100"); <br>
+            &nbsp; &nbsp; } <br>
+            &nbsp; &nbsp; &nbsp; function closeWin() { <br>
+            &nbsp; &nbsp; &nbsp; myWindow.close(); <br>
+            &nbsp; &nbsp; } <br>
+            &nbsp; &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+        </div>
+        <h3>window other method</h3>
+        <div class="ex">
+
+            &lt;body&gt; <br>
+            &nbsp; &lt;button onclick="openWin()"&gt;Open myWindow&lt;/button&gt; <br>
+            &nbsp; &lt;button onclick="moveFunc()"&gt;Move window&lt;/button&gt; <br>
+            &nbsp; &lt;script&gt; <br>
+            &nbsp; &nbsp; let myWindow; <br>
+            &nbsp; &nbsp; function openWin() { <br>
+            &nbsp; &nbsp; &nbsp; myWindow = window.open("", "", "width=200,height=100"); <br>
+            &nbsp; &nbsp; &nbsp; myWindow.document.write("I am open window") <br>
+            &nbsp; &nbsp; } <br>
+            &nbsp; &nbsp; &nbsp; function moveFunc() { <br>
+            &nbsp; &nbsp; &nbsp; myWindow.moveTo(300,300); <br>
+            &nbsp; &nbsp; &nbsp;// myWindow.moveBy(100,100); <br>
+            &nbsp; &nbsp; &nbsp;// myWindow.resizeTo(100,100); <br>
+            &nbsp; &nbsp; &nbsp;// myWindow.resizeBy(100,100); <br>
+            &nbsp; &nbsp; &nbsp;// scrollTo(100,100); // on same page & button position fixed <br>
+            &nbsp; &nbsp; &nbsp;// scrollBy(100,100); <br>
+            &nbsp; &nbsp; } <br>
+            &nbsp; &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+        </div>
+
+        <div>
+            <h3>Window Location Object</h3>
+            Location object contains information about the current URL. <br><br>
+            Location object is a property of the window object. <br><br>
+            Location object is accessed with: <br><br>
+            window.location or just location <br>
+            Property <br><br>
+            &bull;<b> hash :- </b> Sets or returns the anchor part (#) of a URL <br><br>
+            &bull;<b> host :- </b> Sets or returns the hostname and port number of a URL <br><br>
+            &bull;<b> hostname :- </b> Sets or returns the hostname of a URL <br><br>
+            &bull;<b> href :- </b> Sets or returns the entire URL <br><br>
+            &bull;<b> origin :- </b> Returns the protocol, hostname and port number of a URL <br><br>
+            &bull;<b> pathname :- </b> Sets or returns the path name of a URL <br><br>
+            &bull;<b> port :- </b> Sets or returns the port number of a URL <br><br>
+            &bull;<b> protocol :- </b> Sets or returns the protocol of a URL <br><br>
+            &bull;<b> search :- </b> Sets or returns the querystring part of a URL <br><br>
+
+            <h3>Location Object Methods</h3>
+
+            &bull;<b>assign():- </b> Loads a new document <br><br>
+            &bull;<b>reload():- </b> Reloads the current document <br><br>
+            &bull;<b>replace():- </b> Replaces the current document with a new one.
+
+            <h3>Window History Object</h3>
+
+            &bull; <b> back() :-</b> Loads the previous URL (page) in the history list <br> <br>
+            &bull; <b> forward() :-</b> Loads the next URL (page) in the history list <br> <br>
+            &bull; <b> go(-1) :-</b> Loads a specific URL (page) from the history list <br> <br>
+            &bull; <b> length :-</b> Returns the number of URLs (pages) in the history list
+        </div>
+        <div>
+
+            <h3> Window Navigator</h3>
+            The window.navigator object can be written without the window prefix. <br><br>
+
+            Some examples: <br><br>
+
+            &bull; navigator.cookieEnabled //true <br>
+            &bull; navigator.appCodeName <br>
+            &bull; navigator.platform <br>
+            &bull; navigator.appName; <br>
+            &bull; navigator.product; <br>
+            &bull; navigator.appVersion; <br>
+            &bull; navigator.platform; <br>
+            &bull; navigator.language; <br>
+            &bull; navigator.onLine; <br>
+        </div>
+        <div>
+            <h3>Timing Events</h3>
+            The window object allows execution of code at specified time intervals. <br><br>
+
+            These time intervals are called timing events. <br><br>
+
+            The two key methods to use with JavaScript are: <br><br>
+
+            setTimeout(function, milliseconds) <br><br>
+            setInterval(function, milliseconds) <br><br>
+
+            Same as setTimeout(), but repeats the execution of the function continuously. <br><br>
+            The setTimeout() and setInterval() are both methods of the HTML DOM Window object. <br><br>
+        </div>
+        <div class="ex">
+            window.setTimeout(function, milliseconds); <br><br> 
+            window.setTimeout(function, milliseconds); <br> <br>
+            &lt;button onclick="clearTimeout(myVarriable)"&gt;Clear time out&lt;/button&gt;<br><br>
+            &lt;button onclick="clearInterval(myVarriable)"&gt;Clear interval&lt;/button&gt;
+            <br><br>
+            let myVarriable = window.setTimeout(funcName, 3000); <br>
+            <br>
+            function funcName(){ <br>
+            console.log('calling after 3 second') <br>
+            } <br>
+            <br>
+
+        </div>
+    </div>
+</body>
+
+</html>

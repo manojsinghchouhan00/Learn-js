@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opp's concept's</title>
+    <style>
+        /* p,h1{
+        text-align: center;
+    } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Introduction</h1>
+        <!-- Template string!!! -->
+        <h2>Template string!!!</h2>
+        <p>
+            let user = "Vijay singh"; <br>
+            let marks = 350; <br>
+            document.write("Hello " + user + " your marks is"+marks); <br><br>
+
+            <b>With Template String</b> <br><br>
+
+            let user = "Vijay singh"; <br>
+            let marks = 350; <br>
+            document.write(`Hello ${user} your marks is ${marks}`); <br><br>
+
+            <b>Template String with Function</b> <br><br>
+
+            let firstName = "Vijay"; <br>
+            let lastName = "singh"; <br>
+
+            function fullname(firstName, lastName){ <br><br>
+            return `${firstName} ${lastName}`; <br>
+            } <br>
+
+            let hello = `Hello ${fullname(firstName, lastName)} Welcome to 2o24.`; <br><br>
+
+            document.write(hello); <br>
+        </p>
+        <hr>
+        <!-- Arrow funcion!!! -->
+        <h1>Arrow funcion!!!</h1>
+        <p>
+
+            let myFunc = function(name){ <br>
+            return `Welcome ${name}`; <br>
+            } <br><br>
+
+            console.log(myFunc("Jayesh")); <br><br>
+
+            <b>With Arrow Function </b> <br><br>
+
+            let myFuncVar = (name) => { <br>
+            return `Welcome ${name}`; <br>
+            } <br> <br>
+
+            console.log(myFuncVar("Jayesh")); <br><br>
+
+            <b>Arrow Function with Multiple Parameters</b> <br><br>
+
+            let myFuncVar = (name,age) => { <br>
+            return `Welcome ${name} ${age}`; <br>
+            } <br>
+
+            console.log(myFuncVar("Jayesh", 30)); <br>
+        </p>
+        <hr>
+        <!-- Rest operator -->
+        <h1>Rest operator</h1>
+        <p>
+            function sum(name, ...args){ <br>
+            console.log(arguments); <br>
+            document.write(`Hello ${name} Your Marks : `); <br><br>
+
+            let sum = 0; <br>
+            for(let i in args){ <br>
+            sum += args[i]; <br><br>
+            } <br>
+
+            document.write(sum); <br>
+            } <br><br>
+
+            sum("Vijay singh",10,20,30,40,50); <br>
+        </p>
+        <hr>
+        <!--  Spread operator -->
+        <h1>Spread operator</h1>
+        <p>
+            function sum(name,...args){ <br>
+            console.log(arguments); <br>
+            <br>
+            document.write(`Hello : ${name} `); <br>
+            <br>
+            let sum = 0; <br>
+            for(let i in args){ <br>
+            sum += args[i]; <br>
+            } <br>
+            <br>
+            document.write(sum); <br>
+            } <br>
+            <br>
+            var arr = [20,30,40]; <br>
+            sum("Vijay singh",...arr); <br><br>
+
+            <b>Spread Operator with Objects</b> <br><br>
+
+            var obj1 = { <br>
+            name : "Vijay singh", <br>
+            course : "Btech" <br>
+            } <br>
+            <br>
+            var obj2 = { <br>
+            age : 22 <br>
+            } <br>
+            <br>
+            var obj3 = {...obj1, ...obj2}; <br>
+            <br>
+            console.log(obj3); <br>
+        </p>
+        <hr>
+
+        <!-- Object literal -->
+
+        <h1>Object literal</h1>
+        <p>
+            let name = "Vijay singh", <br>
+            course = "Btech"; <br>
+
+            var obj = { <br>
+            name : name, <br>
+            course : course <br>
+            }; <br>
+
+            console.log(obj); <br>
+            console.log(obj.name); <br><br>
+
+            <b>With Object Literals</b> <br><br>
+            let name = "Vijay singh", <br>
+            course = "Btech"; <br>
+
+            var obj = { <br>
+            name, <br>
+            course <br>
+            }; <br>
+
+            console.log(obj); <br>
+            console.log(obj.name); <br><br>
+
+            <b>Variable as a property name</b> <br><br>
+            et n = "name"; <br>
+
+            var obj = { <br>
+            [n] : "Vijay singh", <br>
+            course : "Btech", <br>
+            detail(){ <br>
+            return `${this.name} is student of ${this.course}`; <br>
+            } <br>
+            }; <br><br>
+
+            <b>Computed property name</b> <br><br>
+            let name = 'student'; <br>
+
+            var obj = { <br>
+            [name + "name"] : "Vijay singh", <br>
+            course : "Btech", <br>
+            detail(){ <br>
+            return `${this.studentname} is student of ${this.course}`; <br>
+            } <br>
+            }; <br><br>
+
+            <b>Declare function in object before Object Literals</b> <br><br>
+            var obj = { <br>
+            name, <br>
+            course, <br>
+            detail : function(){ <br>
+            return `${this.name} is student of ${this.course}`; <br>
+            } <br>
+            }; <br>
+
+            console.log(obj.detail()); <br><br>
+
+            <b>Declare function in object with Object Literals</b> <br><br>
+            ar obj = { <br>
+            name, <br>
+            course, <br>
+            detail(){ <br>
+            return `${this.name} is student of ${this.course}`; <br>
+            } <br>
+            }; <br>
+
+            console.log(obj.detail()); <br>
+
+            // New Way to view object's property value <br>
+            console.log(obj['name']); <br>
+            console.log(obj['detail']()); <br><br>
+
+            <b>Return Function value as a Object Literal</b> <br><br>
+            function student(fname, lname, course){ <br>
+            let fullname = fname + " " + lname; <br>
+
+            return {fullname, course}; <br>
+            } <br>
+
+            console.log(student(fname, lname, course)); <br><br>
+
+            <b>Let take variable as Object</b> <br><br>
+            function student(fname, lname, course){ <br>
+            let fullname = fname + " " + lname; <br>
+
+            return {fullname, course}; <br>
+            } <br>
+
+            let s = student("Ram","Kumar", "Bcom"); <br>
+
+            console.log(s.fullname); <br>
+            console.log(s.course); <br>
+
+        </p>
+        <hr>
+        <!-- Destructuring Array -->
+        <h1>Destructuring Array</h1>
+        <p>
+            let user = ["Vijendra singh", 22, "Indore"]; <br>
+
+            let [name, age, city] = user; <br>
+
+            console.log(name); <br>
+            console.log(age); <br>
+            console.log(city); <br><br>
+
+            <b>Using Default Value</b> <br><br>
+            let user = ["Vijendra singh", 22, "Indore"]; <br>
+
+            let [name, age = 20, city] = user; <br><br>
+
+            <b>With Nested Array</b> <br><br>
+            let user = ["Vijendra singh", 22, "Indore", ["Male", 22000]]; <br>
+            let [name, age = 20, city,[gender, salary]] = user; <br>
+
+            console.log(gender); <br>
+            console.log(salary); <br><br>
+
+            <b>Using Rest Operator</b> <br><br>
+            let user = ["Vijendra singh", 22, "Indore"]; <br>
+
+            let [name, ...args] = user; <br>
+
+            console.log(name); <br>
+            console.log(args); <br><br>
+
+            <b>Using with function</b> <br><br>
+            function user([name, age = 20, city]){ <br>
+            console.log(name); <br>
+            console.log(age); <br>
+            console.log(city); <br>
+            } <br>
+
+            user(["Vijendra singh", 22, "Indore"]); <br><br>
+
+            <b>Return an Array from Function</b> <br><br>
+            function user(){ <br>
+            return ["Vijendra singh", 22, "Indore"]; <br>
+            } <br>
+
+            let [name, age = 20, city] = user(); <br>
+
+            console.log(city); <br>
+        </p>
+        <hr>
+        <!-- Destructuring Object -->
+        <h1>Destructuring Object!!!</h1>
+        <p>
+            let user = { <br>
+            name : "Vijendar", <br>
+            age : 22, <br>
+            city : "Indore" <br>
+            } <br>
+            <br>
+            let {name, age, city} = user; <br>
+            <br>
+            console.log(city); <br>
+            <br>
+            Using Alias Name <br>
+            let user = { <br>
+            name : "Vijendar", <br>
+            age : 22, <br>
+            city : "Indore" <br>
+            } <br>
+            <br>
+            let {name : n,age : a,city : c} = user; <br>
+            <br>
+            console.log(n); <br>
+
+        </p>
+        <!-- OOP'S CONCEPTS -->
+        <h1>Object orianted programming langunge</h1>
+        <p>
+            Object-oriented programming is based on the concept of objects. In object-oriented programming data
+            structures, or objects are defined, each with its own properties or attributes. Each object can also contain
+            its own property or methods. Software is designed by using objects that interact with one another. <br><br>
+
+            <b>Class</b> :- Classes are blueprints of an Object. A class can have many Objects.<br><br>
+            <b>Object</b> :- An Object is an instance of a class. Objects are everywhere in JavaScript<br><br>
+
+            The Four Pillars of Object Oriented Programming <br><br>
+            Abstraction. <br>
+            Encapsulation. <br>
+            Inheritance. <br>
+            Polymorphism. <br>
+        </p>
+        <hr>
+        <p>
+            class hello{ <br>
+            &nbsp;&nbsp; message(){ <br>
+            &nbsp;&nbsp;&nbsp; console.log("Hello Everyone"); <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+
+            <br>
+            let a = new hello(); <br>
+            <br>
+            console.log(typeof a); <br>
+            <br>
+            a.message(); <br>
+            <hr>
+            <!-- Constructor function -->
+            <b>Constructor function in class</b> <br><br>
+            class student{ <br>
+            &nbsp;&nbsp; constructor(){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; console.log("Constructor Function") <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            let a = new student(); // <br><br>
+            <hr>
+            <b>Initilize Property</b> <br><br>
+            class student{ <br>
+            &nbsp;&nbsp;constructor(){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;let studentname; <br>
+            &nbsp;&nbsp;} <br>
+            } <br>
+            <br>
+            let a = new student(); <br>
+            <br>
+            a.studentname = "Vijay singh"; <br>
+            <br>
+            <hr>
+            <b>Initilize Property with constructor</b> <br><br>
+            class student{ <br>
+            &nbsp;&nbsp;constructor(name){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello " + name); <br>
+            &nbsp;&nbsp;} <br>
+            } <br>
+            <br>
+            let a = new student("Vijay singh"); <br>
+            <br>
+            <hr>
+            <b>Prototype method</b> <br><br>
+            class student{ <br>
+            &nbsp;&nbsp;constructor(name){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;this.studentname = name; <br>
+            &nbsp;&nbsp;} <br>
+            &nbsp;&nbsp; hello(){ <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;console.log("Hello " + this.studentname); <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            let a = new student('Vijay singh'); <br>
+            a.hello(); <br>
+            <hr>
+            <b>Static Method</b> <br><br>
+            class student{ <br>
+            &nbsp;&nbsp; static staticMethod(){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; console.log("Static Method"); <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            student.staticMethod(); <br>
+            <hr>
+        </p>
+        <!-- Class inheritance -->
+        <h1>Inheritance</h1>
+        <p>
+            class employee{ <br>
+            &nbsp;&nbsp; constructor(){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; console.log("constructor Function Employee"); <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            class manager extends employee{ <br>
+            <br>
+            } <br>
+            <br>
+            let a = new manager(); <br>
+            <br>
+            <hr>
+            <b>Use Consturctor of derived parrent class</b> <br>
+            <b>Example - 1</b>
+            <br><br>
+            class employee{ <br>
+            &nbsp;&nbsp; constructor(){ <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; console.log("constructor Function Employee"); <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            class manager extends employee{ <br>
+            &nbsp;&nbsp; constructor(){ <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; super(); <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; console.log("constructor Function Manager"); <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            let a = new manager(); <br>
+            <br>
+            <b>Example - 2</b> <br>
+            class employee{ <br>
+            &nbsp;&nbsp; constructor(name, age, salary){ <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; this.empname = name; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; this.empage = age; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; this.empsalary = salary; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; //console.log("Constructor : Employee"); <br>
+            &nbsp;&nbsp; } <br>
+            <br>
+            &nbsp;&nbsp; info(){ <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; document.write(`<br>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Employee Class <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Name : ${this.empname} <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Age : : ${this.empage} <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Salary : ${this.empsalary} <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;`) <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            class manager extends employee{ <br>
+            <br>
+            &nbsp;&nbsp; info(){ <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; let ta = 1000; <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; let pa = 300; <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; let totalsalary = this.empsalary + ta + pa; <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;document.write(` <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Manager Class <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Name : ${this.empname} <br> <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Age : : ${this.empage} <br> <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Salary : ${totalsalary} <br>
+            &nbsp;&nbsp; &nbsp;&nbsp;`) <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            class test extends manager{ <br>
+            <br>
+            } <br>
+            <br>
+            let a = new test("Vijay singh", 22, 20000); <br>
+            //let b = new employee("Ram Kumar", 22, 12000); <br>
+            <br>
+            a.info(); <br>
+            //b.info(); <br>
+        </p>
+    </div>
+    <script>
+        // function name1(){
+        //     console.log("first")
+        // }
+
+        // let name1 = (...rest)=> {
+        //     var arr = ['jay','kumar']
+        //     console.log("Arrow functions first",rest , arr[0], arr[1]);
+        //     // console.log("Arrow functions two",a)
+        //     // console.log("Arrow functions three",a)
+        // };
+
+        // name1(1,2,3,3,4,5,6,7)
+
+        // let arr1 = ["man", "man@gmail.com", 30, 10000];
+
+        // // let name = arr1[0];
+        // // let email = arr1[1];
+        // // let age = arr1[2];
+
+        // let [name,email,age,selery] = arr1;
+
+        // console.log("Destracturing :-",name ,email, age, selery)
+
+        let obj = { name: "akash", email: "akash@gmailcom" }
+
+        // let name = obj.name;
+        // let email = obj.email;
+
+        let { name, email } = obj
+
+        console.log("Destraction :-", name, email)
+
+
+
+
+    </script>
+</body>
+
+</html>

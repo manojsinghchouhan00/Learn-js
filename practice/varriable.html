@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varriable</title>
+</head>
+
+<body>
+    <div>
+        <h1>Heading</h1>
+        <div id="demo"></div>
+    </div>
+    <script>
+        //1. Varriable.......................................
+        var a = 10;
+        var a = 20;
+        a = 30;
+
+        let a = 10;
+        let a = 10; //wrong
+        a = 20;
+
+        const a = 10;
+        // a = 20; wrong
+        console.log("first :", a)
+
+        //2. Datatype.......................................
+        // var x = 10; // (Number)
+        // var x = "I am string"; // (String)
+        // var x; // (Undefined)
+        // var x = null; // (Null)
+        // var x = true; // (Boolean)
+        // var x = { name: "jay", age: 23, email: "j@gmail.com"}; // (Object)
+        // var x = [1, 2, 3, 4, 5, "jay", "rupa", true]; // (Array)
+        // var d = new Date("2022-03-25");
+
+        // console.log("first :", x)
+        // console.log("first :", d)
+
+        //3. Output.......................................
+
+        // let x = document.getElementById("demo").innerHTML="<h3> I am heading 3</h3>"
+
+        // console.log("first :", x)
+
+        // window.alert("I am Alert")
+        // window.confirm("I am confirm")
+        // window.prompt("I am prompt")
+        // console.error("Somethig else error")
+        // console.warn("Somethig else Warning")
+        // console.clear();
+        // console.time("testing");
+        // console.timeEnd("testing");
+        // window.print()
+        // document.write("I am document.write")
+
+        //4.  operator.......................................
+
+        // let x ;
+        // const a = x ?? 'default string';
+        // document.write("I am document.write :- ",a)
+
+        //5. object........................................
+        // const a = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     age: 50,
+        //     eyeColor: "blue"
+        // };
+        // a.myfood = "Bahutsara hai"
+        // console.log(a);
+
+        //6. function .............call()................
+        //     const person = {
+        //         myfun : function (age) {
+        //             return this.fName + " " + this.lName +" age is "+  age
+        //         }
+        //     }
+        //     const person1 = {
+        //         fName: "Jay",
+        //         lName: "Shree ram"
+        //     }
+        //     const person2 = {
+        //         fName: "Jay-1",
+        //         lName: "Shree ram-1"
+        //     }
+        //    console.log("call() : ", person.myfun.call(person1, 30))
+
+        // .............Apply()................
+        //     const person = {
+        //         myfun : function (age) {
+        //             return this.fName + " " + this.lName +" age is "+  age
+        //         }
+        //     }
+        //     const person1 = {
+        //         fName: "Jay",
+        //         lName: "Shree ram"
+        //     }
+        //     const person2 = {
+        //         fName: "Jay-1",
+        //         lName: "Shree ram-1"
+        //     }
+        //    console.log("call() : ", person.myfun.apply(person1, [30]))
+
+        //     The call() method takes arguments separately.
+        //     The apply() method takes arguments as an array.
+        //      With the bind() method, an object can borrow a method from another object.
+
+        // // .............bind()................
+
+        // const person = {
+        //     fName: "Jayant",
+        //     lName: "Kumar",
+        //     myfun: function (age) {
+        //         return this.fName + " " + this.lName + " age is " + age
+        //     }
+        // }
+        // const person1 = {
+        //     fName: "Jay",
+        //     lName: "Shree ram"
+        // }
+        // const person2 = {
+        //     fName: "Jay-1",
+        //     lName: "Shree ram-1"
+        // }
+
+        // const bindMethod = person.myfun.bind(person1, 30)
+        // console.log("bind() : ", bindMethod())
+
+        //7. .............this keyword................
+        //   What is this ?
+        //             In JavaScript, the this keyword refers to an object.
+
+        // Which object depends on how this is being invoked(used or called).
+
+        // The this keyword refers to different objects depending on how it is used:
+
+        // In an object method, this refers to the object.
+        //             Alone, this refers to the global object.
+        // In a function, this refers to the global object.
+        // In a function, in strict mode, this is undefined.
+        // In an event, this refers to the element that received the event.
+        // Methods like call(), apply(), and bind() can refer this to any object.
+        // Here this keyword is lost when using callback function then using bind method
+
+        // const person = {
+        //     fName: "Jayant",
+        //     lName: "Kumar",
+        //     myfun: function () {
+        //         console.log(this.fName + " " + this.lName + " age is ")
+        //     }
+        // }
+        // setTimeout(person.myfun, 3000)
+
+        // let bindMethod = person.myfun.bind(person)
+        // setTimeout(bindMethod, 3000)
+
+        // .............Clouser........................function..............
+
+        // A closure is the combination of a function bundled together (enclosed) with references to its
+        // surrounding state (the lexical environment). In other words, a closure gives you access to an outer
+        // function's scope from an inner function.
+
+        // let count = 0;
+        // function outer() {
+        //     // let count = 0;
+        //     function inner() {
+        //         // let count = 0;
+        //         count += 1;
+        //         console.log("count :-", count)
+        //         return count;
+        //     }
+        //     inner()
+        // }
+        // outer();
+        // outer();
+        // outer();
+
+        // // Example of clouser:-
+
+        // function outer() {
+        //     const name = "Career inspire";
+        //     function inner() {
+        //         console.log(name);
+        //     }
+        //     return inner;
+        // }
+
+        // const myFunc = outer();
+        // myFunc();
+
+        // ...........javascript classes.....................//
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <div>
+        <h1>Date object by JavaScript!!!</h1>
+        <p>
+            JavaScript Date Objects let us work with dates:
+        </p>
+        <h2 id="date-1"></h2>
+        <p>
+            In JavaScript, date objects are created with new Date(). <br>
+            <br>
+            new Date() returns a date object with the current date and time. <br>
+            <br>
+
+
+            Creating Date Objects <br>
+            Date objects are created with the new Date() constructor. <br>
+            <br>
+            new Date() <br>
+            new Date(date string) <br>
+            new Date(year,month) <br>
+            new Date(year,month,day) <br>
+            new Date(year,month,day,hours) <br>
+            new Date(year,month,day,hours,minutes) <br>
+            new Date(year,month,day,hours,minutes,seconds) <br>
+            new Date(year,month,day,hours,minutes,seconds,ms) <br>
+            new Date(milliseconds) <br>
+            <br>
+            const d = new Date("October 13, 2014 11:13:00"); <br>
+            const d = new Date("2024-01-25"); <br>
+            const d = new Date(2018, 11, 24, 10, 33, 30, 0); <br><br>
+        </p>
+
+        <p>
+            There are generally 3 types of JavaScript date input formats:
+        </p>
+        <table border="1">
+            <tr>
+                <td> Type </td>
+                <td>Example </td>
+            </tr>
+            <tr>
+                <td> ISO Date </td>
+                <td> "2015-03-25" (The International Standard) </td>
+            </tr>
+            <tr>
+                <td> Short Date </td>
+                <td> "03/25/2015" </td>
+            </tr>
+            <tr>
+                <td> Long Date </td>
+                <td> "Mar 25 2015" or "25 Mar 2015" </td>
+            </tr>
+        </table>
+        <h3>Date Input - Parsing Dates</h3>
+        <div>
+            <p>
+                If you have a valid date string, you can use the <b>Date.parse()</b> method to convert it to
+                <b>milliseconds</b>. <br>
+                <br>
+                Date.parse() returns the number of milliseconds between the date and <b>January 1, 1970:</b> <br>
+                <br>
+                Example <br>
+                let msec = Date.parse("Feb 1, 2024"); <br>
+                console.log(msec);
+
+            </p>
+            <h4>
+                You can then use the number of milliseconds to convert it to a date object: <br>
+                const d = new Date(msec); <br>
+                console.log(d);
+
+            </h4>
+        </div>
+
+
+        <p>
+            Get the Current Time <br>
+            const date = new Date(); <br>
+            Date Get Methods <br>
+        </p>
+        <table border="1">
+            <tr>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td> getFullYear() </td>
+                <td> Get year as a four digit number (yyyy) </td>
+            </tr>
+            <tr>
+                <td> getMonth() </td>
+                <td> Get month as a number (0-11) </td>
+            </tr>
+            <tr>
+                <td> getDate() </td>
+                <td> Get day as a number (1-31) </td>
+            </tr>
+            <tr>
+                <td> getDay() </td>
+                <td> Get weekday as a number (0-6) </td>
+            </tr>
+            <tr>
+                <td> getHours() </td>
+                <td> Get hour (0-23) </td>
+            </tr>
+            <tr>
+                <td> getMinutes() </td>
+                <td> Get minute (0-59) </td>
+            </tr>
+            <tr>
+                <td> getSeconds() </td>
+                <td> Get second (0-59) </td>
+            </tr>
+            <tr>
+                <td> getMilliseconds() </td>
+                <td>Get millisecond (0-999) </td>
+            </tr>
+            <tr>
+                <td> getTime() </td>
+                <td> Get time (milliseconds since January 1, 1970) </td>
+            </tr>
+        </table>
+
+
+
+
+        <script>
+            document.write("<br><br> var now = new Date();" + "<br><br>");
+
+            var now = new Date();
+            document.getElementById("date-1").innerHTML = now;
+
+            /* ToDateString Method Example */
+            document.write("now.toDateString() &nbsp; :- &nbsp; " + now.toDateString() + "<br><br>");
+
+            /* GetDate Method */
+            document.write("now.getDate() &nbsp; :- &nbsp; " + now.getDate() + "<br><br>");
+
+            /* GetFullYear Method */
+            document.write("now.getFullYear() &nbsp; :- &nbsp; " + now.getFullYear() + "<br><br>");
+
+            /* GetMonth Method */
+            document.write("now.getMonth() &nbsp; :- &nbsp; " + now.getMonth() + "<br><br>");
+
+            /* GetDay Method */
+            document.write("now.getDay() &nbsp; :- &nbsp; " + now.getDay() + "<br><br>");
+
+            /* GetHours Method */
+            document.write("now.getHours() &nbsp; :- &nbsp; " + now.getHours() + "<br><br>");
+
+            /* GetMinutes Method */
+            document.write("now.getMinutes() &nbsp; :- &nbsp; " + now.getMinutes() + "<br><br>");
+
+            /* GetSeconds Method */
+            document.write("now.getSeconds() &nbsp; :- &nbsp; " + now.getSeconds() + "<br><br>");
+
+            /* GetMilliseconds Method */
+            document.write("now.getMilliseconds() &nbsp; :- &nbsp; " + now.getMilliseconds() + "<br><br>");
+        </script>
+
+        <h2>Set Date Methods</h2>
+        <p>
+            Set Date methods are used for setting a part of a date:
+        </p>
+        <table border="1">
+            <tr>
+                <td> Method</td>
+                <td> Description </td>
+            </tr>
+            <tr>
+                <td> setDate() </td>
+                <td> Set the day as a number (1-31) </td>
+            </tr>
+            <tr>
+                <td> setFullYear() </td>
+                <td> Set the year (optionally month and day) </td>
+            </tr>
+            <tr>
+                <td> setHours() </td>
+                <td> Set the hour (0-23) </td>
+            </tr>
+            <tr>
+                <td> setMilliseconds() </td>
+                <td> Set the milliseconds (0-999) </td>
+            </tr>
+            <tr>
+                <td> setMinutes() </td>
+                <td> Set the minutes (0-59) </td>
+            </tr>
+            <tr>
+                <td> setMonth() </td>
+                <td> Set the month (0-11) </td>
+            </tr>
+            <tr>
+                <td> setSeconds() </td>
+                <td> Set the seconds (0-59) </td>
+            </tr>
+            <tr>
+                <td> setTime() </td>
+                <td> Set the time (milliseconds since January 1, 1970) </td>
+            </tr>
+        </table>
+        <script>
+            document.write("<br><br>");
+
+            /*setDate Method */
+            document.write("now.setDate(20); <br>");
+            now.setDate(20);
+
+            /*setFullYear Method */
+            document.write("now.setFullYear(2020);<br>");
+            now.setFullYear(2020);
+
+            /*setFullYear Method */
+            document.write("now.setMonth(4);<br>");
+            now.setMonth(4);
+
+            /*setHours Method */
+            document.write("now.setHours(14);<br><br>");
+            now.setHours(14);
+
+            document.write('document.write(now.getDate() + " / " + now.getMonth() + " / " + now.getFullYear());<br>');
+
+            document.write("Output above line :- " + now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear());
+        </script>
+    </div>
+
+</body>
+
+</html>

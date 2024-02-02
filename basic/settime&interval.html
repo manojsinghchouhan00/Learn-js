@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript Animation</title>
+    <style>
+        #test {
+            width: 150px;
+            height: 150px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test"></div>
+
+    <!-- ..... settime out and clear time out ......  -->
+
+	<!-- <button onclick="stopAnimation()">Stop Animation</button> -->
+
+    <script>
+        var a = 0;
+        var id = setInterval(Anim, 500);
+
+        function Anim() {
+            a = a + 10;
+            if (a == 200) {
+                clearInterval(id);
+            } else {
+                var target = document.getElementById("test");
+                //target.style.marginLeft = a + 'px';
+                target.style.width = a + 'px';
+            }
+        }
+
+        //  //  //..... settime out and clear time out ...... // //  //
+
+        /* JavaScript setTimeout*/
+
+        /*var id = setTimeout(Anim,5000);
+        
+        function Anim(){
+            var target = document.getElementById("test");
+            target.style.width = "500px";
+            //console.log("Hello");
+        }*/
+
+        var id = setTimeout(function () {
+            var target = document.getElementById("test");
+            target.style.width = "500px";
+        }, 5000);
+
+
+        /* JavaScript clearTimeout*/
+        function stopAnimation() {
+            clearTimeout(id);
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- setTimeout(function, milliseconds, param1, param2, ...) -->
+<!-- The clearTimeout() method clears a timer set with the setTimeout() method. -->
+
+<!-- setInterval(function, milliseconds, param1, param2, ...) -->
+<!-- The clearInterval() method clears a timer set with the setInterval() method. -->

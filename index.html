@@ -6,55 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./js-image/img.jpg">
     <title>JavaScript</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            font-size: 25px;
-            font-family: system-ui;
-        }
-
-        .container {
-            border: 1px solid black;
-            margin: 0px;
-            padding: 2px;
-
-        }
-
-        table,
-        tr,
-        td,
-        th {
-            border: 1px solid gray;
-            margin: 20px;
-            padding: 20px;
-            border-collapse: collapse;
-        }
-
-        /* table tbody tr:nth-child(odd) {
-            background-color: #95e497;
-        }
-        table thead tr:nth-child(odd) {
-            background-color: #b8c0a7;
-        } */
-        table {
-            background-color: #b0eff5;
-
-        }
-
-        tr:hover {
-            background-color: rgb(202, 124, 95);
-        }
-
-        .day {
-            border: 1px solid rgb(236, 106, 106);
-            margin: 0px;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="up">
+        <div class="nav-main">
+            <ul id="navbar">
+                <li class="res"><a href="#up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-gear" viewBox="0 0 16 16">
+                            <path
+                                d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z" />
+                            <path
+                                d="M11.886 9.46c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.044c-.613-.181-.613-1.049 0-1.23l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
+                        </svg>
+                    </a>
+                </li>
+                <!-- <li class="res"><a href="#history">History</a></li> -->
+                <li class="res"><a href="#variable">Varriable</a></li>
+                <li class="res"><a href="#dt">DT</a></li>
+                <li class="res"><a href="#output">Js output</a></li>
+                <li class="res"><a href="#operator">Operator</a></li>
+                <li class="res"><a href="#string">String</a></li>
+                <li class="res"><a href="#loop">Loop&Arr&Obj</a></li>
+                <!-- <li class="res"><a href="#array">Array</a></li>
+                <li class="res"><a href="#object">Object</a></li> -->
+                <li class="res"><a href="#math">Math</a></li>
+                <li class="res"><a href="#func">Function</a></li>
+                <li class="res"><a target="_blank" href="./basic/bom.html">BOM</a></li>
+                <!-- <li class="res"><a target="_blank" href="#func">Function</a></li> -->
+            </ul>
+        </div>
         <div class="day">
 
             <h3>What is JavaScript??</h3>
@@ -88,171 +71,173 @@
                 JavaScript contains a standard library of objects, like Array, Date, and Math, and a core set of
                 language elements like operators, control structures, and statements.
             </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Version</th>
-                        <th>Name</th>
-                        <th>Release Year</th>
-                        <th>Features</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ES1</td>
-                        <td>ECMAScript 1</td>
-                        <td>1997</td>
-                        <td>Initial Release</td>
-                    </tr>
-                    <tr>
-                        <td>ES2</td>
-                        <td>ECMAScript 2</td>
-                        <td>1998</td>
-                        <td>Minor Editorial Changes</td>
-                    </tr>
-                    <tr>
-                        <td>ES3</td>
-                        <td>ECMAScript 3</td>
-                        <td>1999</td>
-                        <td>Add :
-                            <ul>
-                                <li>Regular Expression</li>
-                                <li>Exception Handling</li>
-                                <li>switch case and do-while</li>
-                                <li>try/catch</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES4</td>
-                        <td>ECMAScript 4</td>
-                        <td>Abandoned due to conflicts</td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td>ES5</td>
-                        <td>ECMAScript 5</td>
-                        <td>2009</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>JavaScript “strict mode”</li>
-                                <li>JSON support</li>
-                                <li>JS getters and setters</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES6</td>
-                        <td>ECMAScript 2015</td>
-                        <td>2015</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>let and const</li>
-                                <li>Class declaration</li>
-                                <li>import and export</li>
-                                <li>for..of loop</li>
-                                <li>Arrow functions</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES7</td>
-                        <td>ECMAScript 2016</td>
-                        <td>2016</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>Block scope for variable</li>
-                                <li>async/await</li>
-                                <li>Array.includes function</li>
-                                <li>Exponentiation Operator</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES8</td>
-                        <td>ECMAScript 2017</td>
-                        <td>2017</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>Object.values</li>
-                                <li>Object.entries</li>
-                                <li>Object.getOwnPropertiesDescriptors</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES9</td>
-                        <td>ECMAScript 2018</td>
-                        <td>2018</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>spread operator</li>
-                                <li>rest parameters</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES10</td>
-                        <td>ECMAScript 2019</td>
-                        <td>2019</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>Array.flat()</li>
-                                <li>Array.flatMap()</li>
-                                <li>Array.sort is now stable</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES11</td>
-                        <td>ECMAScript 2020</td>
-                        <td>2020</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>BigInt primitive type</li>
-                                <li>nullish coalescing operator</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES12</td>
-                        <td>ECMAScript 2021</td>
-                        <td>2021</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>String.replaceAll() Method</li>
-                                <li>Promise.any() Method</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES13</td>
-                        <td>ECMAScript 2022</td>
-                        <td>2022</td>
-                        <td>
-                            Added :-
-                            <ul>
-                                <li>Top-level await</li>
-                                <li>Static block inside classes</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ES.Next</td>
-                        <td></td>
-                        <td></td>
-                        <td>Dynamic name for upcoming versions</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div style="overflow-x:auto; margin: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Version</th>
+                            <th>Name</th>
+                            <th>Release Year</th>
+                            <th>Features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ES1</td>
+                            <td>ECMAScript 1</td>
+                            <td>1997</td>
+                            <td>Initial Release</td>
+                        </tr>
+                        <tr>
+                            <td>ES2</td>
+                            <td>ECMAScript 2</td>
+                            <td>1998</td>
+                            <td>Minor Editorial Changes</td>
+                        </tr>
+                        <tr>
+                            <td>ES3</td>
+                            <td>ECMAScript 3</td>
+                            <td>1999</td>
+                            <td>Add :
+                                <ul>
+                                    <li>Regular Expression</li>
+                                    <li>Exception Handling</li>
+                                    <li>switch case and do-while</li>
+                                    <li>try/catch</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES4</td>
+                            <td>ECMAScript 4</td>
+                            <td>Abandoned due to conflicts</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>ES5</td>
+                            <td>ECMAScript 5</td>
+                            <td>2009</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>JavaScript “strict mode”</li>
+                                    <li>JSON support</li>
+                                    <li>JS getters and setters</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES6</td>
+                            <td>ECMAScript 2015</td>
+                            <td>2015</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>let and const</li>
+                                    <li>Class declaration</li>
+                                    <li>import and export</li>
+                                    <li>for..of loop</li>
+                                    <li>Arrow functions</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES7</td>
+                            <td>ECMAScript 2016</td>
+                            <td>2016</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>Block scope for variable</li>
+                                    <li>async/await</li>
+                                    <li>Array.includes function</li>
+                                    <li>Exponentiation Operator</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES8</td>
+                            <td>ECMAScript 2017</td>
+                            <td>2017</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>Object.values</li>
+                                    <li>Object.entries</li>
+                                    <li>Object.getOwnPropertiesDescriptors</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES9</td>
+                            <td>ECMAScript 2018</td>
+                            <td>2018</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>spread operator</li>
+                                    <li>rest parameters</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES10</td>
+                            <td>ECMAScript 2019</td>
+                            <td>2019</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>Array.flat()</li>
+                                    <li>Array.flatMap()</li>
+                                    <li>Array.sort is now stable</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES11</td>
+                            <td>ECMAScript 2020</td>
+                            <td>2020</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>BigInt primitive type</li>
+                                    <li>nullish coalescing operator</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES12</td>
+                            <td>ECMAScript 2021</td>
+                            <td>2021</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>String.replaceAll() Method</li>
+                                    <li>Promise.any() Method</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES13</td>
+                            <td>ECMAScript 2022</td>
+                            <td>2022</td>
+                            <td>
+                                Added :-
+                                <ul>
+                                    <li>Top-level await</li>
+                                    <li>Static block inside classes</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ES.Next</td>
+                            <td></td>
+                            <td></td>
+                            <td>Dynamic name for upcoming versions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <h3>What is ECMA??</h3>
             <p>European Computer Manufacturer's Association <br>
                 ECMA is a organization to create a standard for technologies. It is provide rule, details and guideline.
@@ -280,22 +265,23 @@
             <p>
                 The javascript program is a set of intruction / list of instructions also called statement.
             </p>
-            <!-- The programming instructions written in a program. A programming language are known as statements. The order of
-        execution of Statements is the same as they are written. -->
+            <!-- The programming instructions written in a program. A programming language are known as statements. The order of execution of Statements is the same as they are written. -->
 
             <h4>1. Semicolons:</h4>
-            Semicolons separate ==> js statements.
-            A semicolon ==> end the statement .
+            Semicolons separate ==> js statements. <br>
+            Semicolon ==> end the statement .
 
             <h4>2. Code Blocks:</h4>
             Js statements can be grouped together ==> curly brackets. <br>
-            Grouping ==> purpose ==> Executed together.
+            Grouping ==> purpose ==>Statements Execute together.
 
-            <h4>3. White Space:</h4>
-            Javascript ignores multiple white spaces.
-            <h4>4. Line Length and Line Breaks: </h4>
-            Javascript code’s preferred line length ==> 80 characters.
-            <!-- The best place to break a  code line in Javascript, if it doesn’t fit, is after an operator. -->
+            <!-- <h4>3. White Space:</h4>
+            Javascript ignores multiple white spaces. -->
+
+            <!-- <h4>4. Line Length and Line Breaks: </h4>
+            Javascript code’s preferred line length ==> 80 characters. 
+            The best place to break a  code line in Javascript, if it doesn’t fit, is after an operator.-->
+
             <h4>5. Keywords: </h4>
             Keywords ==> reserved words for Js. cannot be used as a variable name.
 
@@ -303,8 +289,8 @@
             JavaScript Syntax is used to define the set of rules. <br>
             <dl>
                 <dt><b>Syntax :- </b></dt>
-                <dd>console.log("Basic Print method in JavaScript on console");</dd>
-                <dd>document.write("Basic Print method in JavaScript on Html document");</dd>
+                <dd>console.log("On console");</dd>
+                <dd>document.write("On browser ");</dd>
 
                 <dt><b>Variable declaration :-</b></dt>
                 <dd> let c, d, e;</dd>
@@ -315,15 +301,16 @@
                 <dd>e = c/d;</dd>
             </dl>
 
-            <h3>What is JavaScript varriable??</h3>
-            A JavaScript variable is the simple name of the storage location where data is stored. There are two types
-            of
-            variables :- <br>
-            <b>Local variables</b>: Declare a variable inside of a block or function. <br>
-            <b>Global variables</b>: Declare a variable outside function or with a window object.
+            <hr id="variable">
+            <br>
+            <h2>!!! JavaScript varriable !!!</h2>
+            A JavaScript variable is the simple <u>name of the storage location where data is stored</u>. There are two
+            types of variables :- <br>
+            <b>Local variables</b>: Declare a variable <u>inside of a block or function</u>. <br>
+            <b>Global variables</b>: Declare a variable <u>outside of functions</u>.
 
+            <h4>&bull; There are some basic rules to declare a variable in JavaScript:</h4>
             <ul>
-                There are some basic rules to declare a variable in JavaScript:
                 <li>These are case-sensitive</li>
                 <li>Can only begin with a letter, underscore(“_”) or “$” symbol </li>
                 <li>It can contain letters, numbers, underscore, or “$” symbol</li>
@@ -340,70 +327,69 @@
                 const d = "JAVa"; <br> <br>
                 <b>Diffrence between let, var and const??</b>
             </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Property</th>
-                        <th>var</th>
-                        <th>let</th>
-                        <th>const</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Scope</td>
-                        <td>Function scoped</td>
-                        <td>Block scoped</td>
-                        <td>Block scoped</td>
-                    </tr>
+            <div style="overflow-x:auto; margin: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>var</th>
+                            <th>let</th>
+                            <th>const</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Scope</td>
+                            <td>Function scoped</td>
+                            <td>Block scoped</td>
+                            <td>Block scoped</td>
+                        </tr>
 
-                    <!-- <tr>
-                        <td>Updation</td>
-                        <td>Mutable</td>
-                        <td>Mutable</td>
-                        <td>Immutable</td>
-                    </tr> -->
-                    <tr>
-                        <td>Redeclaration</td>
-                        <td>Yes</td>
-                        <td>No</td>
-                        <td>No</td>
-                    </tr>
-                    <tr>
-                        <td>Re-Assign</td>
-                        <td>Yes</td>
-                        <td>Yes</td>
-                        <td>No</td>
-                    </tr>
-                    <tr>
-                        <td>Hoisting</td>
-                        <td>Hoisted at top</td>
-                        <td>No Hoisted</td>
-                        <td>No Hoisted</td>
-                    </tr>
-                    <tr>
-                        <td>Origins</td>
-                        <td>Pre ES2015</td>
-                        <td>ES2015(ES6)</td>
-                        <td>ES2015(ES6)</td>
-                    </tr>
-                    <tr>
-                        <td>Support</td>
-                        <td>Supported in the old version of Browser</td>
-                        <td>Not supported in the old version of the Browser</td>
-                        <td>Not supported in the old version of the Browser</td>
-                    </tr>
-                </tbody>
-            </table>
-
+                        <tr>
+                            <td>Redeclaration</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Re-Assign</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Hoisting</td>
+                            <td>Hoisted at top</td>
+                            <td>No Hoisted</td>
+                            <td>No Hoisted</td>
+                        </tr>
+                        <tr>
+                            <td>Origins</td>
+                            <td>Pre ES2015</td>
+                            <td>ES2015(ES6)</td>
+                            <td>ES2015(ES6)</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Supported in the old version of Browser</td>
+                            <td>Not supported in the old version of the Browser</td>
+                            <td>Not supported in the old version of the Browser</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
             <!-- Therefore there is no need to explicitly define the type of a variable. We can declare variables in JavaScript in three ways: -->
-            There are majorly two types of languages.
-            <p> <b> Statically typed language :- </b> Where each variable and expression type is already known at
+
+            <p>
+                <b>There are majorly two types of languages.</b> <br><br>
+                <b> Statically typed language :- </b> Where each variable and expression type is already known at
                 compile
                 time. Once a variable is declared to be
                 of a certain data type, it cannot hold values of other data types. <br>
                 Example: C, C++, Java.
             </p>
+            <hr>
             <p>
                 <b>Dynamically typed languages:-</b>These languages can receive different data types over time. In this
                 type
@@ -413,10 +399,10 @@
                 re-assign any variable with any other value having another data type as given below. <br>
                 Example: Ruby, Python, JavaScript
             </p>
-            <p>
+            <hr id="dt">
             <h3>What is Datatypes in JavaScript??</h3>
-
-            Datatype are two type :- (1). Primitive(predefined). (2). NonPrimitive(Reference)
+            <p>
+                Datatype are two type :- (1). Primitive(predefined). (2). NonPrimitive(Reference)
             </p>
             <dl>
                 <dt>(A). Primitive DataTypes :-</dt>
@@ -436,67 +422,77 @@
             <dl>
                 <dt>How to write DataTypes in javascript??</dt>
                 <dd>1. var x = 10 ; // (Number)</dd>
-                <dd>2. var x = "I am string" ; // (String) </dd>
-                <dd>3. var x ; // (Undefined) </dd>
-                <dd>4. var x = null ; // (Null)</dd>
-                <dd>5. var x = true ; // (Boolean)</dd>
-                <dd>6. var x = {name : "jay",age : 23, email : j@gmail.com} ; // (Object)</dd>
-                <dd>7. var x =[ 1, 2, 3, 4, 5, "jay", "rupa", true ] ; // (Array)</dd>
-                <dd>8. var d = new Date("2022-03-25");</dd>
+                <dd>2. let x = BigInt("123456789012345678901234567890");</dd>
+                <dd>3. var x = "I am string" ; // (String) </dd>
+                <dd>4. var x ; // (Undefined) </dd>
+                <dd>5. var x = null ; // (Null)</dd>
+                <dd>6. var x = true ; // (Boolean)</dd>
+                <dd>7. var x = {name : "jay",age : 23, email : j@gmail.com} ; // (Object)</dd>
+                <dd>8. var x =[ 1, 2, 3, 4, 5, "jay", "rupa", true ] ; // (Array)</dd>
+                <dd>9. var d = new Date("2022-03-25");</dd>
+                <dd>10. var s = Symbol();</dd>
             </dl>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Primitive</th>
-                        <th>Non-Primitive</th>
-                    </tr>
-                </thead>
+            <div style="overflow-x:auto; margin: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Primitive</th>
+                            <th>Non-Primitive</th>
+                        </tr>
+                    </thead>
 
-                <body>
-                    <tr>
-                        <td>Primitive Data types are predefined.</td>
-                        <td>Non-Primitive data types are created by the programmer</td>
-                    </tr>
-                    <tr>
-                        <td>Primitive Data types will have certain values.</td>
-                        <td>Non-Primitive data types can be NULL.</td>
-                    </tr>
-                    <tr>
-                        <td>Size depends on the type of data structure.</td>
-                        <td>Size is not fixed</td>
-                    </tr>
-                    <tr>
-                        <td>Examples are numbers and strings.</td>
-                        <td>Examples are Array and Linked List.</td>
-                    </tr>
-                    <tr>
-                        <td>It can start with a lowercase.</td>
-                        <td>It can start with uppercase.</td>
-                    </tr>
-                </body>
-            </table>
+                    <tbody>
+                        <tr>
+                            <td>Primitive Data types are predefined.</td>
+                            <td>Non-Primitive data types are created by the programmer</td>
+                        </tr>
+                        <tr>
+                            <td>Primitive Data types will have certain values.</td>
+                            <td>Non-Primitive data types can be NULL.</td>
+                        </tr>
+                        <tr>
+                            <td>Size depends on the type of data structure.</td>
+                            <td>Size is not fixed</td>
+                        </tr>
+                        <tr>
+                            <td>Examples are numbers and strings.</td>
+                            <td>Examples are Array and Linked List.</td>
+                        </tr>
+                        <tr>
+                            <td>It can start with a lowercase.</td>
+                            <td>It can start with uppercase.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr id="output">
+            <h3>JavaScript Output</h3>
             <dl>
-                <h3>JavaScript Output</h3>
                 <dt>JavaScript Output defines the ways to display the output of a given code. </dt>
                 <dd>-(1). innerHTML :- document.getElementById("id").innerHTML;</dd>
                 <dd>-(2). document.write(): Used ==> testing purpose.and Syntax ==> document.write()</dd>
                 <dd>-(3). window.alert(): Display content ==> alert box. Syntax ==> window.alert("Career-Inspire on
-                    documents"); </dd>
+                    documents");
+                </dd>
                 <dd>-(4). console.log(): Used ==> debuggingAnd Syntax==> console.log("CareerInspire on conole") </dd>
                 <dd>-(5). window.prompt() :- Take input from user. Syntax ==> window.prompt("Enter input") </dd>
                 <dd>-(6). window.confirm() :- Confirmation by user. Syntax ==> window.confirm("Enter input") </dd>
-
                 <dd>-(7). console.error("Somethig else error"): Used ==> debuggingAnd Syntax==> show red color on
-                    console </dd>
+                    console
+                </dd>
                 <dd>-(8). console.warn("Somethig else error"): Used ==> debuggingAnd Syntax==> show green color on
-                    console </dd>
+                    console
+                </dd>
                 <dd>-(9). console.clear(): Used ==> debuggingAnd Syntax==> console clean </dd>
                 <dd>-(10). console.time("testing"): Used ==> debuggingAnd Syntax==> testing </dd>
                 <dd>-(11). console.timeEnd("testing"): Used ==> debuggingAnd Syntax==> testing(time :- 0.05ms )</dd>
+                <dd>-(12). window.print() :- Confirmation and cancel by user. Syntax ==> window.print() </dd>
+
             </dl>
             what is if, if-else statement ??
         </div>
+        <hr id="operator">
         <div class="day">
             <h3>What is JavaScript Operators??</h3>
             <p>JavaScript operators perform the operation between two or more operands.</p>
@@ -518,14 +514,16 @@
                 <li>
                     Nullish coalescing assignment operator :- first value is undefined or null, the second value is
                     assigned. <br>
-                    let x; <br> x ??= 5;
+                    let x ; <br>
+                    const a = x ?? 'default string'; <br>
+                    console.log(a);
                 </li>
 
             </ul>
         </div>
-
+        <hr id="string">
         <div class="day">
-            <h3>What is javascript String??</h3>
+            <h3>javascript String??</h3>
             <p>
                 JavaScript String Object is a <u>sequence of characters</u>. It contains zero or more characters within
                 <u>single or
@@ -557,6 +555,7 @@
                 </b>
             </p>
         </div>
+        <hr id="loop">
         <div class="day">
 
             <h3>What is loop in javascript??</h3>
@@ -619,7 +618,7 @@
         </div>
         <!-- Object manipulation -->
         <div class="day">
-            <h3>What is javascript object??</h3>
+            <h3>javascript object??</h3>
             <p>
                 Objects, in JavaScript, are the most important data type and form the building blocks for modern
                 JavaScript.
@@ -648,6 +647,7 @@
             }
         </div>
         <!-- math method -->
+        <hr id="math">
         <div class="day">
             <h3>What is math() method??</h3>
             <p>The Javascript Math object is used to perform mathematical operations on numbers.</p>
@@ -692,6 +692,7 @@
             <p id="math-1"></p>
             <p id="math-2"></p>
         </div>
+        <hr id="func">
 
         <!-- Jvascript function -->
         <div class="day">
@@ -746,8 +747,27 @@
                 console.log(person.age); <br>
 
                 <h3>Anonymous fuction??</h3>
+                <p>
+                    var myfun = function () { <br>
+                    console.log("I am Anonymous function!"); <br>
+                    }; <br>
+                    myfun(); <br> <br>
+                    setTimeout(function () { <br>
+                    console.log("I am Anonymous function call after 2 second!"); <br>
+                    }, 2000); <br> <br>
+                    var myFun = () => <br>
+                    { <br>
+                    console.log("I am Anonymous Arrow function!"); <br>
+                    } <br>
+                    myFun(); <br>
+                </p>
                 <h3>Return type fuction??</h3>
-                <h3>IIFC type fuction??</h3>
+                <h3>IIFC type fuction?? (Immediately Invoked Function Expressions)</h3>
+                <p>
+                    (function() { <br>
+                    console.log("Welcome to IIFE!"); <br>
+                    })(); <br> <br>
+                </p>
 
             </blockquote>
         </div>
