@@ -5,17 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browser object model</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .container {
+            border: 1px solid black;
+            margin: 0px;
+            padding: 20px;
+            width: 99%;
+        }
+    </style>
+
 </head>
 
 <body>
-    <div>
+    <div class="container" id="up">
         <h1>Introdaction to BOM</h1>
         <p>
             Browser Object Model (BOM) allows JavaScript to "INTRACT WITH" the browser. <br>
             The Browser Object Model (BOM) is a collection of objects exposed by the browser that allow JavaScript to
             interact with the browser window, document, and other browser-specific functionalities. The BOM includes
-            objects such as Window, Navigator, Location, History, and Screen.
-            <img src="../js-image/bom.jpg" alt="">
+            objects such as Window, Navigator, Location, History, and Screen. <br>
+            <img src="../js-image/bom.jpg" alt="" width="80%">
         </p>
         <h2>The Window Object</h2>
         <p>
@@ -173,7 +188,7 @@
             The setTimeout() and setInterval() are both methods of the HTML DOM Window object. <br><br>
         </div>
         <div class="ex">
-            window.setTimeout(function, milliseconds); <br><br> 
+            window.setTimeout(function, milliseconds); <br><br>
             window.setTimeout(function, milliseconds); <br> <br>
             &lt;button onclick="clearTimeout(myVarriable)"&gt;Clear time out&lt;/button&gt;<br><br>
             &lt;button onclick="clearInterval(myVarriable)"&gt;Clear interval&lt;/button&gt;

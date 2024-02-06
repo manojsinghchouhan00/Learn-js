@@ -227,6 +227,10 @@
 
 
 // --------------------Four pillar of OOPs  4.2 Polymorphism example--------------------
+// Method Overloading
+// When there are multiple functions with the same name but different parameters then these functions are said to be overloaded. Functions can be overloaded by changes in the number of arguments or/and a change in the type of arguments.
+
+// other defination
 
 // Polymorphism method-overloading
 // When two or more methods in the same class have the same method name but different parameters, this is called overloading.
@@ -249,3 +253,98 @@
 // console.log(calculateArea(5));         // Output: "Area of a square: 25"
 // console.log(calculateArea(4, 6));      // Output: "Area of a rectangle: 24"
 // console.log(calculateArea(3, 4, 5));   // Output: "Invalid number of arguments provided."
+
+
+// //................By Bard method overridding.................
+
+
+// While JavaScript doesn't directly support method overloading, here's how the concepts relate in the language:
+
+// Method Overriding:
+
+// JavaScript supports method overriding through inheritance.
+// A subclass can redefine a method inherited from its superclass with the same name, parameters, and return type to provide specialized behavior.
+// Example:
+
+// JavaScript
+// class Animal {
+//     makeSound() {
+//         console.log("Generic animal sound");
+//     }
+// }
+
+// class Dog extends Animal {
+//     makeSound() {
+//         console.log("Woof!"); // Overriding the inherited method
+//     }
+// }
+
+// const dog = new Dog();
+// dog.makeSound(); // Output: Woof!
+// Use code with caution. Learn more
+// Method Overloading Workarounds:
+
+// JavaScript employs alternative approaches to achieve similar functionality:
+
+// Conditional Logic:
+
+// JavaScript
+// function add(x, y) {
+//     if (typeof x === 'number' && typeof y === 'number') {
+//         return x + y;
+//     } else if (typeof x === 'string' && typeof y === 'string') {
+//         return x.concat(y);
+//     } else {
+//         throw new Error('Invalid input types');
+//     }
+// }
+// Use code with caution. Learn more
+// Default Parameter Values:
+
+// JavaScript
+// function greet(name, greeting = 'Hello') {
+//     console.log(`${greeting}, ${name}!`);
+// }
+// Use code with caution. Learn more
+// arguments Object:
+
+// JavaScript
+// function sum() {
+//     let total = 0;
+//     for (let i = 0; i < arguments.length; i++) {
+//         total += arguments[i];
+//     }
+//     return total;
+// }
+// Use code with caution. Learn more
+// Multiple Functions with Distinct Names:
+
+// JavaScript
+// function addNumbers(x, y) {
+//     return x + y;
+// }
+
+// function addStrings(x, y) {
+//     return x.concat(y);
+// }
+// Use code with caution. Learn more
+// Function Wrapping:
+
+// JavaScript
+// function createAdder(type) {
+//     return function(x, y) {
+//         if (type === 'number') {
+//             return x + y;
+//         } else if (type === 'string') {
+//             return x.concat(y);
+//         } else {
+//             throw new Error('Invalid type');
+//         }
+//     };
+// }
+// Use code with caution. Learn more
+// Key Points:
+
+// JavaScript's prototypal inheritance enables method overriding.
+// Workarounds can simulate method overloading for flexibility.
+// Choose the approach that best suits your use case and coding style.

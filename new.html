@@ -4,309 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Oop's concept</title>
+    <style>
+        /* input {
+            display: block;
+        } */
+    </style>
 </head>
 
-<body>
+<body onmousewheel="myfunc2(event)">
     <div>
-        <h1> Array</h1>
-        <a href="xyz" target="_blank" id="abc">Click</a>
-
+        JavaScript events
     </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere, officiis quibusdam dolore, impedit minus,
+    maxime distinctio voluptate corporis consequatur quo reiciendis perspiciatis ullam vitae modi est voluptatem magni
+    iusto?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sapiente voluptatem distinctio at suscipit aut qui ad
+    nihil sequi enim. Odio perferendis repudiandae praesentium aperiam, id voluptates quaerat quis iste neque odit nemo
+    pariatur nam molestias provident, tempore suscipit, aliquam similique. Fuga sit tenetur reprehenderit alias expedita
+    ipsum libero dolores aspernatur quas atque accusamus architecto earum explicabo odit, aliquam dolorum facilis ipsam
+    iste. Eos accusamus perferendis sequi molestias tempore, laborum perspiciatis vitae possimus recusandae similique a
+    autem alias culpa consequuntur facere ipsa officia dolor totam aliquid voluptatibus. Eius ipsam ea, optio earum
+    dolor neque quia! Maiores temporibus ducimus minus corrupti quidem atque soluta quos iusto? Accusamus alias dicta
+    hic nulla at corrupti provident possimus! Itaque dolorem harum enim nulla nihil nisi natus vitae aspernatur beatae,
+    voluptatibus numquam provident odit dolorum culpa ex eaque deserunt. Deserunt laudantium cumque nesciunt ullam ipsum
+    perferendis expedita fugit eaque rem ratione mollitia placeat nisi quaerat, pariatur vero at, necessitatibus,
+    deleniti adipisci corrupti in! Laboriosam nam impedit veniam aut iusto amet, totam excepturi accusantium vitae dicta
+    officiis vero nobis eveniet obcaecati saepe et velit minus, earum inventore ipsum nisi. Aliquid quae velit, enim
+    recusandae ea sint, fugiat dolorum voluptas, vitae ducimus consectetur tenetur inventore! Dicta id perspiciatis
+    quisquam ab, qui dolore vel beatae inventore eaque. Animi pariatur nulla quo ex reiciendis reprehenderit nostrum
+    sequi cupiditate facere veritatis, modi eum doloribus recusandae hic minus eaque dolorum culpa. Dignissimos ut
+    facilis assumenda! Quasi beatae obcaecati qui cum, sed impedit, magni minima, vero maxime explicabo nulla. Optio
+    doloremque, fuga modi corrupti adipisci sunt qui harum excepturi molestias voluptate eligendi ipsam animi aliquam
+    eveniet eaque at voluptatibus blanditiis veniam natus. Dolores magnam iste fugiat, sint asperiores, iusto est
+    repellendus quaerat veniam magni placeat eius eveniet provident repudiandae possimus eos illo nulla facilis itaque
+    ut adipisci minima. Ipsa nam est quo exercitationem magni quia consequatur inventore tempore itaque aliquid sequi
+    natus magnam, pariatur non soluta eum, quaerat numquam esse praesentium assumenda beatae culpa mollitia officia
+    quam? Debitis magnam harum quis dolorem quas eius hic aut mollitia non aliquam aliquid illo adipisci asperiores
+    voluptate sequi in cumque, eos delectus recusandae facere minima illum quaerat autem. Labore itaque iste consectetur
+    eveniet repellat adipisci, enim illum deserunt facere voluptatibus ipsam quasi nam veniam accusamus error laboriosam
+    voluptatum officiis assumenda sed. Voluptas corrupti eveniet, ratione animi neque cumque quod modi? Id, culpa itaque
+    maiores cupiditate minus alias animi quo dolor quae eligendi consectetur voluptatibus ipsum at illo natus
+    perspiciatis magnam, minima vero corporis modi architecto, obcaecati optio accusamus dolorem. Unde odit eveniet
+    deleniti dolorem? Odit eveniet explicabo ad dolores, facilis accusantium tempore vitae, suscipit, obcaecati
+    necessitatibus illum molestias! Tempora facilis dolorum accusamus, odit nesciunt sit similique exercitationem!
+    Distinctio exercitationem modi ullam perferendis, quam delectus quasi dignissimos, sed numquam tenetur velit,
+    explicabo nemo illo quia odio dolorum aspernatur eius? Necessitatibus, animi quo! Earum est dicta, laboriosam
+    corrupti, exercitationem voluptatem nobis veritatis quidem magni, odio aspernatur et reprehenderit quam alias modi?
+    Molestiae, veritatis aliquid facilis aspernatur ut placeat eos! Autem maxime non corrupti doloribus tempore
+    similique accusamus!
+
+    Name : <input type="text" id="demo" onkeydown="myfunc2(event)">
+
+    <div id="demo1"></div>
+
+
     <script>
-        // let arr = [[11, 12, 3], [14, 15, 16], 1, 2, 3, 4, 5, 6]
-        // let a = arr.flat()
-        // console.log(a)
 
-        // let arr = [1, 2, 3, 4, 5, 6];
-        // arr.shift()
-        // arr.unshift("jkh")
 
-        // console.log(arr[1])
-        // for (let i = 0; i < arr.length; i++) {
-        //     console.log(arr[i])   
-        // }
+        function myfunc2(event) {
+            // console.log(event.clientX ) 
+            // console.log(event.clientY, "y" )
+            // console.log(event.screenX ) 
+            // console.log(event.screenY, "y" )
+            // console.log(event.pageX, "y" )
+            console.log(event.pageY, "y")
 
-        // let twoD =[
-        //     [1,2,3],
-        //     [4,5,6],
-        //     [7,8,9],
-        // ];
-        // // console.log(twoD[2][2])
+            if (event.pageY > 250) {
+                document.body.style.background = "red"
+            } else {
+                document.body.style.background = "pink"
 
-        // for (let i = 0; i < twoD.length; i++) {
-        //     for (let j = 0; j < twoD[i].length; j++) {
-
-        //         console.log(twoD[i][j])
-        //     }  
-        // }
-
-        // let D3 = [
-        //     [
-        //         [1, 2, 3], [4, 5, 6]
-        //     ],
-        //     [
-        //         [7, 8, 9], [10, 11, 12]
-        //     ]
-        // ]
-        // console.log(D3[0][0][0])
-
-        // for (let i = 0; i < D3.length; i++) {
-        //     for (let j = 0; j < D3[i].length; j++) {
-        //         for (let k = 0; k < D3[i][j].length; k++) {
-        //             console.log(D3[i][j][k])
-        //         }
-        //     }
-        // }
-
-        // const multiD = [[1, 2, 3, 4], 5, 6, 7, [124, 123, 145]];
-        // console.log(multiD[0][3])
-
-        // for (let i = 0; i < multiD.length; i++) {
-        // console.log(multiD[i])
-
-        //     for (let j = 0; j < multiD[i].length; j++) {
-        //     console.log(multiD[i][j])
-
-        //     }
-        // }
-
-        // const arr = [1, 2, 3, 4, 50, 18, 12, 8, 9, 10];
-
-        //    let a = arr.map((val,i)=>{
-        //     // console.log(val,i)
-        //     return val-2;
-        //    })
-        //    console.log(a)
-
-        //    let a =  arr.filter((v) => {
-        //         if(v>5){
-        //             return v
-        //         }
-        //     })
-        //     console.log(a)
-
-        // let a = arr.filter(abc)
-        // function abc(v) {
-        //     return v > 5;
-        // }
-        // console.log(a)
-
-
-        // let s = ['jay', 'viru', 'basanti', 'gabbar', 'thakur'];
-
-        // s.sort()
-        // arr.sort()
-
-        // s.reverse()
-        // arr.reverse()
-
-        // console.log(s)
-        // console.log(arr)
-
-
-        // const obj1 = {};
-        // const obj2 = new Object(); 
-        // const obj3 = new Object(5); 
-
-        // const obj = {
-        //     name: "man",
-        //     email: "man@gmail.com",
-        //     age: 30,
-        //     selery: function () {
-        //         return 10000;
-        //     },
-        //     arr: [1, 2, 3,]
-        // }
-
-
-        // console.log(obj);
-        // console.log(obj.name);
-        // console.log(obj.email);
-        // console.log(obj.selery());
-        // console.log(obj.arr[4]);
-
-        // for (const key in obj) {
-        //     // console.log(key)
-        //     console.log(obj[key])
-        // }
-
-        // Array of obj || obje of array
-
-        // let a = [
-        //     { name: "man", age: 20, mail: "man@gmail.com" },
-        //     { name: "Anjum", age: 10, mail: "anjum@gmail.com" },
-        //     { name: "Anjum", age: 10, mail: "anjum@gmail.com" }
-        // ]
-        // console.log(a[1].mail)
-
-        // let b = {
-        //     x: ["man", 20, "man@gmail.com"], y: ["anjum", 20, "anjum@gmail.com"],
-        // }
-
-        // console.log(b.y[0])
-
-
-        // let obj2 = new Object();
-
-        // obj2.name = "Jayesh";
-        // obj2.age = 30;
-        // obj2.email = "aj@gmail.com"
-
-        // console.log("obj2", obj2)
-
-
-        // const arr = new Array();
-
-        // arr[0] = 14;
-        // arr[1] = 12;
-        // arr[4] = 120;
-        // arr[5] = 124;
-        // console.log(arr)
-
-        // console.log(Math.PI);
-        // console.log(Math.sqrt(1/2));
-        // console.log(Math.abs(15.555));
-        // console.log(Math.ceil(15.001));
-        // console.log(Math.floor(15.99901));
-        // console.log(Math.fround(15.5));
-        // console.log(Math.min(15,50));
-        // console.log(Math.floor(Math.random()*10000));
-        // console.log(Math.pow(2,3));
-
-        // const num = Math.floor(Math.random() * (1000 - 101 + 1)) + 101;
-        // console.log(num);
-
-        // let a = {
-        //     name: "akash",
-        //     age: 20,
-        //     email: "A@gmail.com"
-        // }
-
-        // let name = "Aman";
-        // let age = 20;
-        // let email = "A@gmail.com";
-
-        // let person = {
-        //     n: name,
-        //     a : age,
-        //     e : email
-        // }
-        // console.log(person.n)
-
-
-        // let person = {
-        //     name,
-        //     age,
-        //     email
-        // }
-        // console.log(person.name)
-
-        // let n = "name";
-
-        // let p = {
-        //     [n]: "Aakash singh",
-        //     age: 20,
-        //     mail: "ak@gmail.com",
-        //     detail() {
-        //         return `${this.name} is student of ${this.mail}`;
-        //     }
-        // }
-        // console.log(p)
-
-        // let name = 'student';
-        // var obj = {
-        //     [name + "name"]: "Vijay singh",
-        //     course: "Btech",
-        //     detail() {
-        //         return `${this.studentname} is student of ${this.course}`;
-        //     }
-        // };
-
-        // console.log(obj.studentname)
-        // console.log(obj["course"])
-
-
-        //   function student(fname, lname, course) {
-        //         let fullname = fname + " " + lname;
-        //         return { fullname, course };
-        //     }
-
-        //     let a =  student("Jay", "singh", "btech")
-        //     console.log(a.course);
-
-
-        // let user = ["Vijendra singh", 22, "Indore"];
-        // let [name, ...hhhh] = user;
-        // console.log("name ",name);
-        // console.log(" Resp operator",...hhhh);
-
-        // console.log("Math.E :",Math.E)
-
-        //   console.log("Windon.document : -",window.document);
-        //   console.log("Windon.history : -",window.history);
-        //   console.log("Windon.screen : -",window.screen);
-        // console.log("Windon.navigator : -", window.navigator);
-
-        // function student(fname, lname, course) {
-        //     let fullname = fname + " " + lname;
-        //     return { fullname, course };
-        // }
-        // let s = student("Ram", "Kumar", "Bcom");
-        // console.log(s);
-        // console.log(typeof s);
-        // console.log(s.fullname);
-        // console.log(s.course);
-
-
-        // class car {
-        //      a ="gctf"
-        //     constructor() {
-        //         let name ="jayrsh"
-        //         console.log(name ,"I have car constructor default calling but i dont drive it")
-        //     }
-        // };
-
-        // let a = new car();
-
-        // a.name = "AAkash"
-        // // a.operate()
-        // console.log(a.name)
-
-        // class car {
-        //     constructor(name) {
-        //         // let name ="jayrsh"
-        //         this.n = name;
-        //         console.log(name ,"I have car constructor default calling but i dont drive it")
-        //     }
-        // };
-
-        // let a = new car("JAyesh");
-
-        // let a;
-        // a = document.links[0].attributes[0].nodeValue ="http://127.0.0.1:5500/basic/bom.html"
-        // console.log(a)
-        // let b = document.getElementById("abc").attributes.target.nodeValue = "_self"
-
-        // console.log(b)
-
-        let myWindo;
-        function w_open() {
-            console.log("first")
-            // myWindo = window.open("http://www.fb.nbvjcom", "" , "width=100,height=100")
-            myWindo = window.open("http://127.0.0.1:5500/basic/bom.html", "", "width=200,height=100")
-
+            }
         }
-
-        function w_close() {
-            console.log("first")
-            myWindo.moveBy(300,300)
-            
-        }
-
     </script>
-    <button onclick="w_open()">Click open window</button>
-    <button onclick="w_close()">Click open window</button>
+    <!-- <script src="new.js"></script> -->
 </body>
 
 </html>

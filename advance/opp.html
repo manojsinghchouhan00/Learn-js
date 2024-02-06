@@ -4,20 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opp's concept's</title>
+    <title>Advance JavaScript!!!</title>
     <style>
-        /* p,h1{
-        text-align: center;
-    } */
+        * {
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+
+        .ex {
+            background-color: rgb(173, 173, 238);
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            text-align: center;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        img {
+            width: 45%;
+        }
+
+        @media screen and (max-width:600px) {
+
+            table,
+            img {
+                width: 80%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <h1>Introduction</h1>
+        <h1><u>Introduction</u></h1>
         <!-- Template string!!! -->
         <h2>Template string!!!</h2>
-        <p>
+        <p class="ex">
             let user = "Vijay singh"; <br>
             let marks = 350; <br>
             document.write("Hello " + user + " your marks is"+marks); <br><br>
@@ -44,7 +75,7 @@
         <hr>
         <!-- Arrow funcion!!! -->
         <h1>Arrow funcion!!!</h1>
-        <p>
+        <p class="ex">
 
             let myFunc = function(name){ <br>
             return `Welcome ${name}`; <br>
@@ -71,7 +102,7 @@
         <hr>
         <!-- Rest operator -->
         <h1>Rest operator</h1>
-        <p>
+        <p class="ex">
             function sum(name, ...args){ <br>
             console.log(arguments); <br>
             document.write(`Hello ${name} Your Marks : `); <br><br>
@@ -89,7 +120,7 @@
         <hr>
         <!--  Spread operator -->
         <h1>Spread operator</h1>
-        <p>
+        <p class="ex">
             function sum(name,...args){ <br>
             console.log(arguments); <br>
             <br>
@@ -126,7 +157,7 @@
         <!-- Object literal -->
 
         <h1>Object literal</h1>
-        <p>
+        <p class="ex">
             let name = "Vijay singh", <br>
             course = "Btech"; <br>
 
@@ -223,7 +254,7 @@
         <hr>
         <!-- Destructuring Array -->
         <h1>Destructuring Array</h1>
-        <p>
+        <p class="ex">
             let user = ["Vijendra singh", 22, "Indore"]; <br>
 
             let [name, age, city] = user; <br>
@@ -273,7 +304,7 @@
         <hr>
         <!-- Destructuring Object -->
         <h1>Destructuring Object!!!</h1>
-        <p>
+        <p class="ex">
             let user = { <br>
             name : "Vijendar", <br>
             age : 22, <br>
@@ -307,13 +338,21 @@
             <b>Object</b> :- An Object is an instance of a class. Objects are everywhere in JavaScript<br><br>
 
             The Four Pillars of Object Oriented Programming <br><br>
-            Abstraction. <br>
-            Encapsulation. <br>
-            Inheritance. <br>
-            Polymorphism. <br>
+            <b>Encapsulation</b> :- The process of wrapping properties and functions within a single unit is known as
+            encapsulation. <br> <br>
+            <b>Abstraction</b> :- Abstraction means displaying only essential information and hiding the details. <br>
+            <br>
+            <b>Inheritance</b> :- It is a concept in which some properties and methods of an Object are being used by
+            another Object. Unlike most of the OOP languages where classes inherit classes, JavaScript Objects inherit
+            Objects i.e. certain features (property and methods) of one object can be reused by other Objects. <br> <br>
+            <b>Polymorphism</b> :- Polymorphism is one of the core concepts of object-oriented programming languages.
+            Polymorphism means the same In real life, for example, a boy at the same time may be a student, a class
+            monitor, etc. So a boy can perform different operations at the same time. Polymorphism can be achieved by
+            method overriding and method overloading <br>
         </p>
         <hr>
-        <p>
+        <h2>Class and object concepts </h2>
+        <div class="ex">
             class hello{ <br>
             &nbsp;&nbsp; message(){ <br>
             &nbsp;&nbsp;&nbsp; console.log("Hello Everyone"); <br>
@@ -381,10 +420,54 @@
             <br>
             student.staticMethod(); <br>
             <hr>
-        </p>
+        </div>
+        <!-- Encapsulation -->
+        <h2>Encapsulation</h2>
+        <div class="ex">
+
+            class person { <br>
+            &nbsp;&nbsp; constructor(name, id) { <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; this.name = name; <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; this.id = id; <br>
+            &nbsp;&nbsp; } <br>
+            &nbsp;&nbsp; add_Address(add) { <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; this.add = add; <br>
+            &nbsp;&nbsp; } <br>
+            &nbsp;&nbsp; getDetails() { <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; console.log(`Name is ${this.name}, Address is: ${this.add},ID is: ${this.id}`);
+            <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            <br>
+            let person1 = new person('Mukul', 21); <br>
+            person1.add_Address('Delhi'); <br>
+            person1.getDetails(); <br>
+        </div>
+        <!-- Abstraction -->
+        <h2>Abstraction</h2>
+        <div class="ex">
+            function person(fname, lname) { <br>
+            &nbsp;&nbsp; let firstname = fname; <br>
+            &nbsp;&nbsp; let lastname = lname; <br>
+
+            &nbsp;&nbsp; let getDetails_noaccess = function () { <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; return (`First name is: ${firstname} Last <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; name is: ${lastname}`); <br>
+            &nbsp;&nbsp; } <br>
+
+            &nbsp;&nbsp; this.getDetails_access = function () { <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; return (`First name is: ${firstname}, Last <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; name is: ${lastname}`); <br>
+            &nbsp;&nbsp; } <br>
+            } <br>
+            let person1 = new person('Mukul', 'Latiyan'); <br>
+            console.log(person1.firstname); <br>
+            console.log(person1.getDetails_noaccess); <br>
+            console.log(person1.getDetails_access()); <br>
+        </div>
         <!-- Class inheritance -->
-        <h1>Inheritance</h1>
-        <p>
+        <h2>Inheritance</h2>
+        <div class="ex">
             class employee{ <br>
             &nbsp;&nbsp; constructor(){ <br>
             &nbsp;&nbsp;&nbsp;&nbsp; console.log("constructor Function Employee"); <br>
@@ -460,45 +543,133 @@
             <br>
             a.info(); <br>
             //b.info(); <br>
-        </p>
+        </div>
+        <img src="../js-image/polymorfism.webp" alt="">
+        <img src="../js-image/diffrent.webp" alt="">
+
+
+        <div class="poly">
+            <h2>Method Overloading</h2>
+            <p>
+                Definition: Defining multiple methods with the same name but different parameter lists within the same
+                class. <br>
+                Purpose: Improves code readability and flexibility by allowing variations of a method for different
+                input types or quantities. <br>
+                Occurrence: Within a single class. <br>
+                Polymorphism Type: Compile-time polymorphism (the compiler determines the appropriate method based on
+                argument types at compile time). <br>
+
+            </p>
+            <div class="ex">
+                Java <br>
+                class Calculator { <br>
+                &nbsp;&nbsp; int add(int a, int b) { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; return a + b; <br>
+                &nbsp;&nbsp; } <br>
+                &nbsp;&nbsp; <br>
+                &nbsp;&nbsp; double add(double a, double b) { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; return a + b; <br>
+                &nbsp;&nbsp; } <br>
+                &nbsp;&nbsp; <br>
+                &nbsp;&nbsp; String add(String a, String b) { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; return a + b; <br>
+                &nbsp;&nbsp; } <br>
+                } <br>
+            </div>
+            <br>
+            <h2>Method Overriding</h2>
+            <p>
+                Definition: Redefining an inherited method in a subclass with the same name, parameters, and return type
+                (or a
+                covariant return type). <br>
+                Purpose: Allows subclasses to specialize or customize inherited behavior for specific needs. <br>
+                Occurrence: Between a superclass and its subclass. <br>
+                Polymorphism Type: Runtime polymorphism (the decision of which method to call is made at runtime based
+                on the
+                object's type).
+            </p>
+            <div class="ex">
+                Java
+                class Animal { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; public void makeSound() { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; System.out.println("Generic animal sound"); <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; } <br>
+                &nbsp;&nbsp; } <br>
+
+                &nbsp;&nbsp; class Dog extends Animal { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; @Override <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; public void makeSound() { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; System.out.println("Woof!"); <br>
+                &nbsp;&nbsp; } <br>
+                } <br>
+            </div><br>
+            <div class="ex">
+
+                <b>Note :- </b>While JavaScript doesn't directly support method overloading, here's how the concepts
+                relate in the language: <br>
+                <br>
+                <h2>Method Overriding</h2>
+                <br>
+                JavaScript supports method overriding through inheritance. <br>
+                A subclass can redefine a method inherited from its superclass with the same name, parameters, and
+                return type to provide specialized behavior. <br>
+                <b>Example</b>: <br>
+                <br>
+                JavaScript <br>
+                class Animal { <br>
+                &nbsp;&nbsp; makeSound() { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; console.log("Generic animal sound"); <br>
+                &nbsp;&nbsp; } <br>
+                &nbsp;&nbsp; } <br>
+                &nbsp;&nbsp; <br>
+                &nbsp;&nbsp; class Dog extends Animal { <br>
+                &nbsp;&nbsp; makeSound() { <br>
+                &nbsp;&nbsp; &nbsp;&nbsp; console.log("Woof!"); // Overriding the inherited method <br>
+                &nbsp;&nbsp; } <br>
+                } <br>
+                <br>
+                const dog = new Dog(); <br>
+                dog.makeSound(); // Output: Woof! <br>
+            </div>
+        </div>
+        <br><br>
+
+        <div style="overflow-x: scroll;">
+            <table border="1" align="center">
+                <tr>
+                    <th>Feature </th>
+                    <th>Method Overloading</th>
+                    <th>Method Overriding</th>
+                </tr>
+                <tr>
+                    <td>Parameter list</td>
+                    <td>Different</td>
+                    <td>Same</td>
+                </tr>
+                <tr>
+                    <td>Class scope</td>
+                    <td> Within a class</td>
+                    <td>Between classes</td>
+                </tr>
+                <tr>
+                    <td>Polymorphism</td>
+                    <td> Compile-time</td>
+                    <td>Runtime</td>
+                </tr>
+                <tr>
+                    <td>Inheritance</td>
+                    <td> Not required</td>
+                    <td>Required</td>
+                </tr>
+                <tr>
+                    <td>Return type</td>
+                    <td> May differ</td>
+                    <td>Same or covariant</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <script>
-        // function name1(){
-        //     console.log("first")
-        // }
 
-        // let name1 = (...rest)=> {
-        //     var arr = ['jay','kumar']
-        //     console.log("Arrow functions first",rest , arr[0], arr[1]);
-        //     // console.log("Arrow functions two",a)
-        //     // console.log("Arrow functions three",a)
-        // };
-
-        // name1(1,2,3,3,4,5,6,7)
-
-        // let arr1 = ["man", "man@gmail.com", 30, 10000];
-
-        // // let name = arr1[0];
-        // // let email = arr1[1];
-        // // let age = arr1[2];
-
-        // let [name,email,age,selery] = arr1;
-
-        // console.log("Destracturing :-",name ,email, age, selery)
-
-        let obj = { name: "akash", email: "akash@gmailcom" }
-
-        // let name = obj.name;
-        // let email = obj.email;
-
-        let { name, email } = obj
-
-        console.log("Destraction :-", name, email)
-
-
-
-
-    </script>
 </body>
 
 </html>

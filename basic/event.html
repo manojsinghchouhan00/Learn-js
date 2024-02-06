@@ -4,13 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript events</title>
+    <style>
+        .ex {
+            background-color: rgba(214, 194, 232, 0.828);
+            padding: 20px;
+            word-break: break-all;
+        }
+    </style>
 </head>
 
 <body>
-    <div style="width: 80%; margin: auto;">
-        <h3>Mouse events</h3>
-        <div>
+    <div style="width: 90%; margin: auto;">
+        <h1>javascript events</h1>
+        <p>
+            Javascript has events to provide a dynamic interface to a webpage. <br>
+            A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element <br>
+        </p>
+        <h2>Mouse events</h2>
+        <p>
+            Mouse envets apply on html events. like h1, p, button etc elements.
+        </p>
+        <div class="ex">
+            &lt;button onclick="myFunc()"&gt;Events nature&lt;/button&gt; <br><br>
             &bull; onmouseover/onmouseout - When the mouse passes over an element <br><br>
             &bull; onmousedown/onmouseup - When pressing/releasing a mouse button <br><br>
             &bull; onmousedown - When mouse is clicked: Alert which element <br><br>
@@ -22,8 +38,13 @@
             &bull; ondblclick - When a text is double-clicked <br><br>
         </div>
 
-        <h3>Input events</h3>
-        <div>
+        <h2>Input events</h2>
+        <p>
+            Input envets apply on input element of form element.
+        </p>
+        <div class="ex">
+            Name : &lt;input type="text" id="demo" onkeydown="myfunc2(event)"&gt; <br><br>
+
             &bull; onblur - When a user leaves an input field <br><br>
             &bull; onchange - When a user changes the content of an input field <br><br>
             &bull; onchange - When a user selects a dropdown value <br><br>
@@ -37,8 +58,13 @@
             &bull; onkeyup - When the user releases a key <br><br>
             &bull; onkeydown vs onkeyup - Both <br><br>
         </div>
-        <h3>Window/load events</h3>
-        <div>
+        <h2>Window/load events</h2>
+        <p>
+            Window envets apply on window.
+        </p>
+        <div class="ex">
+            &lt;body onmousewheel="myfunc2(event)"&gt; <br><br>
+
             &bull; onload - When the page has been loaded <br><br>
             &bull; onload - When an image has been loaded <br><br>
             &bull; onerror - When an error occurs when loading an image <br><br>
@@ -46,8 +72,8 @@
             &bull; onresize - When the browser window is resized <br><br>
         </div>
 
-        <h3>other events</h3>
-        <div>
+        <h2>other events</h2>
+        <div class="ex">
             &bull; What is the keycode of the key pressed? (event.keyCode)
             <br><br>
 
@@ -67,6 +93,27 @@
             function getEventType(event) { <br>
             &nbsp;console.log(event.type) <br>
             } <br>
+        </div>
+
+        <br>
+        <div class="ex">
+            &lt;body onmousewheel="myfunc2(event)"&gt; <br><br>
+
+            function myfunc2(event) { <br>
+            &nbsp;&nbsp; // console.log(event.clientX ) <br>
+            &nbsp;&nbsp; // console.log(event.clientY, "y" ) <br>
+            &nbsp;&nbsp; // console.log(event.screenX ) <br>
+            &nbsp;&nbsp; // console.log(event.screenY, "y" ) <br>
+            &nbsp;&nbsp; // console.log(event.pageX, "y" ) <br>
+            &nbsp;&nbsp; console.log(event.pageY, "y" ) <br>
+
+            &nbsp;&nbsp; if(event.pageY>250){ <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; document.body.style.background="red" <br>
+            &nbsp;&nbsp; }else{ <br>
+            &nbsp;&nbsp; &nbsp;&nbsp; document.body.style.background="pink" <br>
+
+            &nbsp;&nbsp; } <br>
+            }
         </div>
     </div>
 </body>

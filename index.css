@@ -13,9 +13,7 @@ body {
   padding: 2px;
   width: 100%;
 }
-* {
-  box-sizing: border-box;
-}
+
 /* start Navigation bar */
 .nav-main {
   position: sticky;

@@ -6,30 +6,113 @@
 </head>
 
 <body>
-    <form action="" onsubmit="submitFunction()">
-        <label for="fname">Name</label>
-        <input type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)"
-            id="fname" name="fname"><br><br>
+    <div class="form-1">
+        <h1>JavaScript form Events</h1>
+        <p>
+            JavaScript Form events are those events that get trigerred when a user interacts with a form in a website. <br>
+            These events includes onfocus, onblur, onsubmit, onchange, ...
+        </p>
 
-
-        <!-- <input type="text" id="fname" onchange="onchangeFunction(this)" onselect="selectFunction()"
-            oninvalid="alert('Please fill the First Name.')" required><br><br> -->
-
-        <label for="pass">Class</label>
-        <input type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)" id="pass" name="pass"><br><br>
-
-        <select id="sec" name="sec" onfocus="focusFunction(this)" onblur="blurFunction(this)"
-            onchange="onchangeFunction(this)">
-            <option value="">India</option>
-            <option value="">Pakistan</option>
-            <option value="">Bangladesh</option>
-            <option value="">Sri Lanka</option>
-            <option value="">Nepal</option>
-        </select>
+        &lt;form action="" onsubmit="submitFunction()"&gt; <br>
+        &nbsp;&nbsp; &lt;label for="fname"&gt;Name&lt;/label&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)"
+        oninput="inputFunction(this)"
+        &nbsp;&nbsp; <br>
+        &nbsp;&nbsp; id="fname" name="fname"&gt; <br>
+        &nbsp;&nbsp; <br>
+        &nbsp;&nbsp; <br>
+        &nbsp;&nbsp; &lt;!-- &lt;input type="text" id="fname" onchange="onchangeFunction(this)"
+        onselect="selectFunction()" <br>
+        &nbsp;&nbsp; oninvalid="alert('Please fill the First Name.')" required&gt; --&gt; <br>
+        &nbsp;&nbsp; <br>
+        &nbsp;&nbsp; &lt;label for="pass"&gt;Class&lt;/label&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)" id="pass"
+        name="pass"&gt; <br>
+        &nbsp;&nbsp; <br>
+        &nbsp;&nbsp; &lt;select id="sec" name="sec" onfocus="focusFunction(this)" onblur="blurFunction(this)" <br>
+        &nbsp;&nbsp; onchange="onchangeFunction(this)"&gt; <br>
+        &nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=""&gt;India&lt;/option&gt; <br>
+        &nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=""&gt;Pakistan&lt;/option&gt; <br>
+        &nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=""&gt;Bangladesh&lt;/option&gt; <br>
+        &nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=""&gt;Sri Lanka&lt;/option&gt; <br>
+        &nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=""&gt;Nepal&lt;/option&gt; <br>
+        &nbsp;&nbsp; &lt;/select&gt; <br>
+        &nbsp;&nbsp; <br>
+        &nbsp;&nbsp; &lt;input type="submit" id="sub" name="sub"&gt; <br>
+        &lt;/form&gt; <br>
+        <hr>
+        &lt;!-- &lt;div id="test" style="border:1px solid red;margin-top:20px;"&gt;&lt;/div&gt; --&gt; <br>
+        &lt;div id="test" style="border:1px solid red" name="test"&gt;&lt;/div&gt;
         <br>
-        <input type="submit" id="sub" name="sub">
-    </form>
+        <hr>
+        <!-- js code -->
+        /* JavaScript Focus Event */ <br>
+        <br>
+        function focusFunction(element) { <br>
+        element.style.background = "lime"; <br>
+        } <br>
+        <br>
+        /* JavaScript Blur Event */ <br>
+        function blurFunction(element) { <br>
+        element.style.background = ""; <br>
+        } <br>
+        <br>
+        /* JavaScript Input Event */ <br>
+        function inputFunction(element) { <br>
+        var x = element.value; <br>
+        document.getElementById("test").innerHTML = x; <br>
+        } <br>
+        <br>
+        /* JavaScript Change Event */ <br>
+        function onchangeFunction(element) { <br>
+        var x = element.value; <br>
+        document.getElementById("test").innerHTML = x; <br>
+        } <br>
+        <br>
+        /* JavaScript Select Event */ <br>
+        function selectFunction() { <br>
+        console.log("You selected some text."); <br>
+        } <br>
+        <br>
+        <br>
+        /* JavaScript Submit Event */ <br>
+        <br>
+        /*function submitFunction(){ <br>
+        alert("You submitted a form."); <br>
+        }*/ <br>
+        <br>
+        function submitFunction() { <br>
+        var x = document.getElementById("fname").value; <br>
+        console.log("submit function", x) <br>
+        alert("Hello " + x); <br>
+        } <br>
+    </div><br><br>
 
+    <div class="form-2">
+        <form action="" onsubmit="submitFunction()">
+            <label for="fname">Name</label>
+            <input type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)"
+                id="fname" name="fname"><br><br>
+
+
+            <!-- <input type="text" id="fname" onchange="onchangeFunction(this)" onselect="selectFunction()"
+                oninvalid="alert('Please fill the First Name.')" required><br><br> -->
+
+            <label for="pass">Class</label>
+            <input type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)" id="pass" name="pass"><br><br>
+
+            <select id="sec" name="sec" onfocus="focusFunction(this)" onblur="blurFunction(this)"
+                onchange="onchangeFunction(this)">
+                <option value="">India</option>
+                <option value="">Pakistan</option>
+                <option value="">Bangladesh</option>
+                <option value="">Sri Lanka</option>
+                <option value="">Nepal</option>
+            </select>
+            <br>
+            <input type="submit" id="sub" name="sub">
+        </form>
+    </div>
 
     <!-- <div id="test" style="border:1px solid red;margin-top:20px;"></div> -->
     <div id="test" style="border:1px solid red" name="test"></div>
@@ -72,7 +155,7 @@
 
         function submitFunction() {
             var x = document.getElementById("fname").value;
-            console.log("submit function",x)
+            console.log("submit function", x)
             alert("Hello " + x);
         }
     </script>
