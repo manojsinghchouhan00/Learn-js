@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browser object model</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
-        body{
+
+        body {
             margin: 0;
         }
+
         .container {
             border: 1px solid black;
             margin: 0px;
             padding: 20px;
             width: 99%;
+        }
+
+        .ex {
+            background-color: rgba(240, 237, 244, 0.83);
+            padding: 20px;
+            word-break: break-all;
         }
     </style>
 
@@ -25,15 +33,15 @@
 <body>
     <div class="container" id="up">
         <h1>Introdaction to BOM</h1>
-        <p>
+        <p class="ex">
             Browser Object Model (BOM) allows JavaScript to "INTRACT WITH" the browser. <br>
             The Browser Object Model (BOM) is a collection of objects exposed by the browser that allow JavaScript to
             interact with the browser window, document, and other browser-specific functionalities. The BOM includes
-            objects such as Window, Navigator, Location, History, and Screen. <br>
-            <img src="../js-image/bom.jpg" alt="" width="80%">
+            objects such as Window, Navigator, Location, History, and Screen. <br> <br>
+            <img src="../js-image/bom.jpg" alt="" width="90%">
         </p>
         <h2>The Window Object</h2>
-        <p>
+        <p class="ex">
             The window object is supported by all browsers. It represents the browser's window. <br>
             <br>
             All global JavaScript objects, functions, and variables automatically become members of the window object.
@@ -47,7 +55,7 @@
             Ex. :- window.document.getElementById("header");
         </p>
         <h3>Window Size</h3>
-        <p>
+        <p class="ex">
             Two properties can be used to determine the size of the browser window. <br><br>
             the inner/outer height/width of the browser window (in pixels) <br><br>
             window.innerHeight <br>
@@ -74,7 +82,7 @@
             &lt;/body&gt; <br>
         </div>
         <h3>Window open()</h3>
-        <div>
+        <div class="ex">
             window.open(URL, name, specs, replace) <br>
             window.open("https://www.fb.com", "facebook", "width=100,height=100,left=200,top=200") <br>
             window.open("index.html", "", "width=100,height=100,left=200,top=200") <br> <br>
@@ -125,9 +133,9 @@
             &nbsp; &lt;/script&gt; <br>
             &lt;/body&gt; <br>
         </div>
+        <h3>Window Location Object</h3>
 
-        <div>
-            <h3>Window Location Object</h3>
+        <div class="ex">
             Location object contains information about the current URL. <br><br>
             Location object is a property of the window object. <br><br>
             Location object is accessed with: <br><br>
@@ -149,16 +157,20 @@
             &bull;<b>reload():- </b> Reloads the current document <br><br>
             &bull;<b>replace():- </b> Replaces the current document with a new one.
 
-            <h3>Window History Object</h3>
-
+        </div>
+        <h3>Window History Object</h3>
+        <div class="ex">
             &bull; <b> back() :-</b> Loads the previous URL (page) in the history list <br> <br>
             &bull; <b> forward() :-</b> Loads the next URL (page) in the history list <br> <br>
             &bull; <b> go(-1) :-</b> Loads a specific URL (page) from the history list <br> <br>
             &bull; <b> length :-</b> Returns the number of URLs (pages) in the history list
-        </div>
-        <div>
+            <br><br>
+            &lt;button onclick="history.back()"&gt;Go Back&lt;/button&gt;
 
-            <h3> Window Navigator</h3>
+        </div>
+        <h3> Window Navigator</h3>
+        <div class="ex">
+
             The window.navigator object can be written without the window prefix. <br><br>
 
             Some examples: <br><br>
@@ -173,8 +185,8 @@
             &bull; navigator.language; <br>
             &bull; navigator.onLine; <br>
         </div>
-        <div>
-            <h3>Timing Events</h3>
+        <h3>Timing Events</h3>
+        <div class="ex">
             The window object allows execution of code at specified time intervals. <br><br>
 
             These time intervals are called timing events. <br><br>
@@ -187,9 +199,10 @@
             Same as setTimeout(), but repeats the execution of the function continuously. <br><br>
             The setTimeout() and setInterval() are both methods of the HTML DOM Window object. <br><br>
         </div>
+        <h2>Examples of Timing function</h2>
         <div class="ex">
-            window.setTimeout(function, milliseconds); <br><br>
-            window.setTimeout(function, milliseconds); <br> <br>
+            window.setTimeout(funcName, milliseconds); <br><br>
+            window.setInterval(funcName, milliseconds); <br> <br>
             &lt;button onclick="clearTimeout(myVarriable)"&gt;Clear time out&lt;/button&gt;<br><br>
             &lt;button onclick="clearInterval(myVarriable)"&gt;Clear interval&lt;/button&gt;
             <br><br>

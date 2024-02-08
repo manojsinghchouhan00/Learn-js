@@ -17,11 +17,11 @@
 
     <!-- ..... settime out and clear time out ......  -->
 
-	<!-- <button onclick="stopAnimation()">Stop Animation</button> -->
+	<button onclick="stopAnimation()">Stop Animation</button>
 
     <script>
         var a = 0;
-        var id = setInterval(Anim, 500);
+        var id1 = setInterval(Anim, 500);
 
         function Anim() {
             a = a + 10;
@@ -55,6 +55,7 @@
         /* JavaScript clearTimeout*/
         function stopAnimation() {
             clearTimeout(id);
+            clearInterval(id1);
         }
     </script>
 

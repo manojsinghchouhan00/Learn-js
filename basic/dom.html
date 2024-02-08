@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            word-wrap: break-word
+                /* word-break: ; */
+        }
+
+        .main {
+            width: 99%;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .ex {
+            background-color: rgba(240, 237, 244, 0.83);
+            padding: 20px;
+        }
+
+        .image {
+            margin: auto;
+            width: 90%;
+        }
+
+        .table-1 {
+            overflow-x: auto
+        }
+
+        .table-1 td,
+        th {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>HTML DOM (Document Object Model)</h1>
+        <div class="ex">
+            <p>
+                When a web page is loaded, the browser creates a Document Object Model of the page.
+                The HTML DOM model is constructed as a tree of Objects
+            </p>
+            <p>
+                With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+            </p>
+            <div class="image">
+                <img src="../js-image/dom.jpg" alt="dom image" width="80%">
+            </div>
+            <h4>DOM : (1). Element node (2). Text node (3). attribute node</h4>
+            <ul>
+                <li>JavaScript can change all the HTML elements in the page</li>
+                <li>JavaScript can change all the CSS styles in the page</li>
+                <li>JavaScript can remove existing HTML elements and attributes</li>
+                <li>JavaScript can add new HTML elements and attributes</li>
+                <li>JavaScript can react to all existing HTML events in the page</li>
+                <li>JavaScript can create new HTML events in the page</li>
+            </ul>
+        </div>
+        <!-- <h2>What is the HTML DOM?</h2>
+        <ul class="ex">
+            <li>The HTML elements as objects</li>
+            <li>The properties of all HTML elements</li>
+            <li>The methods to access all HTML elements</li>
+            <li>The events for all HTML elements</li>
+        </ul> -->
+        <h2>&bull; JS Targeting Methods with the help of document object!!!</h2>
+
+        <div class="ex">
+            var element;
+            <ul>
+                <li>element = document.all;</li>
+                <li>element = document.head;</li>
+                <li>element = document.title;</li>
+                <li>element = document.body;</li>
+                <li>element = document.links;</li>
+                <li>element = document.links[0];</li>
+                <li>element = document.images;</li>
+                <li>element = document.forms;</li>
+                <li>element = document.doctype;</li>
+                <li>element = document.URL;</li>
+                <li>element = document.baseURI;</li>
+                <li>element = document.getElementById("header");</li>
+                <li>element = document.getElementsByClassName("list");</li>
+                <li>element = document.getElementsByClassName("list")[0]</li>
+                <li>element = document.getElementsByTagName("ul");</li>
+                <li>element = document.getElementsByTagName("ul")[2]</li>
+                <li>console.log(element);</li>
+            </ul>
+        </div>
+
+        <h2>&bull; JS DOM Targeting Methods</h2>
+        <div class="ex table-1">
+            <table style border="1px; ">
+                <tr>
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>document.getElimentById()</td>
+                    <td>Select the unique element with given id. In case there are 2 same ID then it selects the first
+                        element.
+                    </td>
+                </tr>
+                <tr>
+                    <td>document.getElementsByClassName()</td>
+                    <td>Select collection elements with given classname</td>
+                </tr>
+                <tr>
+                    <td>document.getElimentsByTagName()</td>
+                    <td>Select collection elements with given tagname</td>
+                </tr>
+            </table>
+        </div> <br>
+
+        <h2>JS DOM Get & Set Value Methods</h2>
+        <div class="ex table-1">
+            <table border="1" cellspacing="2px">
+                <tr>
+                    <th>Get method</th>
+                    <th>Set method</th>
+                </tr>
+                <tr>
+                    <td>innerHTML</td>
+                    <td>innerHTML="&lt;h1&gt;Set text with html&lt;/h1&gt;"</td>
+                </tr>
+                <tr>
+                    <td>innerText</td>
+                    <td>innerText="Set text"</td>
+                </tr>
+                <tr>
+                    <td>getAttribute()</td>
+                    <td>setAttribute("class","xyz")</td>
+                </tr>
+                <tr>
+                    <td>getAttributeNode()</td>
+                    <td>attributes[0].value="xyz"</td>
+                </tr>
+                <tr>
+                    <td>attributes</td>
+                    <td>removeAttribute("class")</td>
+                </tr>
+            </table>
+        </div>
+        <div class="ex">
+            <ul>
+                <li>element = document.getElementById("id_name").innerText;</li>
+                <li>element = document.getElementById("id_name").innerText;</li>
+                <li>element = document.getElementById("id_name").getAttribute("class");</li>
+                <li>element = document.getElementById("id_name").getAttribute("style");</li>
+                <li>element = document.getElementById("id_name").getAttributeNode("style").value;</li>
+                <li>element = document.getElementById("id_name").attributes;</li>
+                <li>element = document.getElementById("id_name").attributes[2].name;</li>
+                <li>element = document.getElementById("header").getAttribute("onClick");</li>
+                <li>element = document.getElementById("header").getAttribute("class");</li>
+                <li>element = document.getElementById("header").getAttributeNode("style");</li>
+                <!-- <li>document.getElementById("header").innerHTML = "<h1>WOW</h1>";</li> -->
+                <li>element = document.getElementById("header").setAttribute("style","border:10px dotted yellow");</li>
+                <li>element = document.getElementById("header").attributes[1].value = "xyz";</li>
+                <li>element = document.getElementById("header").removeAttribute("style");</li>
+                <li>element = document.getElementById("header").removeAttribute("class");</li>
+            </ul>
+            <p> console.log(element);</p>
+        </div>
+        <h2>JS DOM QuerySelectors</h2>
+
+        <div class="ex">
+            <p>
+                <b>
+                    (1). document.querySelector("#idName") <br><br>
+                    (2). document.querySelectorAll(".className") <br><br>
+                    Advanced selector :- document.querySelector("#idName h1")
+                </b>
+            </p>
+            <p>var element;</p>
+            <ul>
+                <!-- <li>//element = document.querySelector("#header").innerHTML = "<h1>WOW</h1>";</li> -->
+                <li>element = document.querySelector("#header").getAttribute ("class");</li>
+                <li>element = document.querySelectorAll(".list");</li>
+                <li>element = document.querySelectorAll(".list")[1].innerHTML;</li>
+                <li>element = document.querySelectorAll("ul");</li>
+                <li>element = document.querySelectorAll("ul")[1].innerHTML;</li>
+                <li>element = document.querySelectorAll("#header h1");</li>
+                <li>element = document.querySelectorAll("#header h1")[1].innerHTML;</li>
+            </ul>
+            <p>console.log(element);</p>
+        </div>
+        <h2> CSS BY JS DOM (Styling Methods)</h2>
+        <div class="ex">
+            <p>
+                <b>
+                    Styling with 3-way... <br><br>
+                    (1). Style object (style attribute). <br><br>
+                    (2). ClassName object (class attribute). <br><br>
+                    (3). classList :- It has two method are following... <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (i). Add method (ii). Remove method classList <br><br>
+                    (target.classList.add("abc",xyz)); <br><br>
+                    (target.classList.remove("abc",xyz));
+                </b>
+            </p>
+            <p>var element;</p>
+            <ul>
+                <li>element = document.querySelector("#header").style.border;</li>
+                <li>element = document.querySelector("#header").style.color;</li>
+                <li>document.querySelector("#header").style.backgroundColor = "red";</li>
+                <li>document.querySelector("#header").style.color = "blue";</li>
+                <li>document.querySelector("#header").className = "abc xyz";</li>
+                <li>element = document.querySelector("#header").className;</li>
+                <li>document.querySelector("#header").classList = "abc xyz";</li>
+                <li>element = document.querySelector("#header").classList;</li>
+                <li>document.querySelector("#header").classList.add("xyz","efg");</li>
+                <li>document.querySelector("#header").classList.remove("xyz");</li>
+                <li>element = document.querySelector("#header").classList;</li>
+            </ul>
+            <p> console.log(element);</p>
+        </div>
+        <h2>JS AddEventListener Method</h2>
+        <div class="ex">
+            <ul>
+                <li>onclick event//
+                    document.getElementById("header").onclick = abc;</li>
+                <li>onmouseenter event
+                    //document.getElementById("header").onmouseenter = abc;</li>
+                <p><b>with addEventListener</b></p>
+                <li> document.getElementById("header").addEventListener("mouseenter",abc);
+                    document.getElementById("header").addEventListener("click", function(){
+                    document.getElementById("header").style.border = "10px solid red";
+                    });</li>
+                <p><b>with removeEventListene</b></p>
+                <li>document.getElementById("header").removeEventListener('mouseleave',abc);</li>
+                <li>document.getElementById("header").addEventListener("click",xyz);</li>
+            </ul>
+        </div>
+        <h2>JS classList Methods</h2>
+        <p>
+            The <b>classList propert</b>y is used for representing the value of the class elements which is a
+            DOMTokenList
+            object.
+            It is a read-only property but we can modify its value by manipulating the classes used in the program. The
+            JavaScript classList property consists of following methods through which we can perform different
+            operations on
+            the class elements:
+        </p>
+        <div class="ex">
+            <ul>
+                <li><b>add()</b>: The add() method is used for adding one or more classes to the element.</li>
+                <li><b>remove()</b>: The remove() method is used for removing one or more classes from the number of
+                    classes
+                    present in
+                    the element.</li>
+                <li><b>toggle()</b>: The toggle() method is used for toggling the specified class names of an element.
+                    It
+                    means on
+                    one
+                    click the specified class gets added and on another click the class gets removed. It is known as the
+                    toggle
+                    property of an element.</li>
+                <li><b>replace()</b>: The replace() method is used for replacing an existing class with a new class.
+                </li>
+                <li><b>contains()</b>: The contains() method of the JavaScript classList property is used for returning
+                    the
+                    Boolean
+                    value as an output. If the class is present, the value is returned as true otherwise false is
+                    returned.
+                </li>
+                <li><b>item()</b>: The item() method is used for displaying the name of the classes at the particular
+                    index.
+                    Thus,
+                    it
+                    returns the class name.</li>
+            </ul>
+        </div>
+
+        <p class="ex">
+            <b> document.getElementById("header").addEventListener("click", abc);</b>
+            <br><br>
+            function abc() {<br>
+            &nbsp;&nbsp; document.getElementById("header").classList.add("xyz","efg"); <br>
+            &nbsp;&nbsp; <br>
+            &nbsp;&nbsp; //document.getElementById("header").classList.remove("xyz"); <br>
+            &nbsp;&nbsp; <br>
+            &nbsp;&nbsp; //var a = document.getElementById("header").classList.length; <br> <br>
+
+            &nbsp;&nbsp; //document.getElementById("header").classList.toggle("xyz"); <br> <br>
+
+            &nbsp;&nbsp; //var a = document.getElementById("header").classList; <br> <br>
+
+            &nbsp;&nbsp; //var a = document.getElementById("header").classList.item(0); <br> <br>
+
+            &nbsp;&nbsp; //var a = document.getElementById("header").classList.contains("first"); <br>
+            &nbsp;&nbsp; <br>
+            &nbsp;&nbsp; console.log(a);<br>
+            }
+        </p>
+        <h2>JS Parent Method</h2>
+        <p>The parentNode property returns the parent node of an element or node.</p>
+        <p>The parentNode property is read-only.</p>
+        <h3>parentElement:</h3>
+        <p>The parentElement property returns the parent element of the specified element.</p>
+        <p>The difference between parentElement and parentNode, is that parentElement returns null if the parent node is
+            not
+            an element node:</p>
+        <div class="ex">
+            <p>
+                //var a = document.getElementById("inner").parentElement;<br> <br>
+
+                //var a = document.getElementById("outer").parentElement;<br> <br>
+
+                //var a = document.body.parentElement;<br> <br>
+
+                //var a = document.getElementById("inner").parentElement.style.background = "red";<br> <br>
+
+                /* document.getElementById("child-c").parentElement.style.background = "red";<br> <br>
+
+                var a = document.getElementById("child-c").parentElement; */<br> <br>
+
+                document.getElementById("child-c").parentElement.style.background = "red";<br> <br>
+
+                var a = document.getElementById("main").parentNode; <br> <br>
+
+                console.log(a);
+            </p>
+        </div>
+        <h2>JS Children Methods</h2>
+        <div class="ex">
+            <p>
+                //var a = document.getElementById("outer").children;<br><br>
+
+                //var a = document.getElementById("inner").children;<br><br>
+
+                //var a = document.getElementById("inner").children[1];<br><br>
+
+                /* document.getElementById("inner").children[1].style.background = "red";<br><br>
+                var a = document.getElementById("inner").children[1]; */<br><br>
+
+                /* document.getElementById("inner").children[0].style.background = "red";<br><br>
+                var a = document.getElementById("inner").children[0].innerHTML; */<br><br>
+
+                //var a = document.getElementById("inner").childNodes;<br><br>
+
+                //var a = document.getElementById("inner").childNodes[0].innerHTML;<br><br>
+
+                document.getElementById("inner").childNodes[3].style.background = "red";<br><br>
+                var a = document.getElementById("inner").childNodes[3]; <br><br>
+
+                console.log(a);
+            </p>
+        </div>
+        <h2>JS FirstChild & LastChild Method </h2>
+        <div class="ex">
+            <p>
+                //var a = document.getElementById("inner").firstElementChild;<br><br>
+
+                //var a = document.getElementById("inner").firstElementChild.innerHTML;<br><br>
+
+                /* document.getElementById("inner").firstElementChild.style.background = "red";<br><br>
+                var a = document.getElementById("inner").firstElementChild.innerHTML; */<br><br>
+
+                /* document.getElementById("outer").lastElementChild.style.background = "red";<br><br>
+                var a = document.getElementById("outer").lastElementChild; */<br><br>
+
+                /* document.getElementById("inner").lastElementChild.style.background = "red";<br><br>
+                var a = document.getElementById("inner").lastElementChild; */<br><br>
+
+                //var a = document.getElementById("inner").firstChild; <br><br>
+
+                //var a = document.getElementById("inner").lastChild; <br><br>
+
+                //var a = document.getElementById("child-c").firstChild; <br><br>
+
+                var a = document.getElementById("child-c").lastChild; <br><br>
+
+                console.log(a);
+            </p>
+        </div>
+        <h2>JS NextSibling & PrevSibling Method</h2>
+        <div class="ex">
+            <p>
+                //var a = document.getElementById("child-C").nextElementSibling;<br><br>
+
+                //var a = document.getElementById("child-C").previousElementSibling;<br><br>
+
+                //var a = document.getElementById("child-C").previousElementSibling.innerHTML ;<br><br>
+
+                /* document.getElementById("child-C").previousElementSibling.style.background = "red";<br><br>
+                var a = document.getElementById("child-C").previousElementSibling.innerHTML; */<br>
+
+                /* document.getElementById("child-C").nextElementSibling.style.background = "red";<br><br>
+                var a = document.getElementById("child-C").nextElementSibling; */<br><br>
+
+                //var a = document.getElementById("child-E").nextElementSibling;<br><br>
+
+                //var a = document.getElementById("child-head").previousElementSibling;<br><br>
+
+                //var a = document.getElementById("child-C").previousSibling;<br><br>
+
+                var a = document.getElementById("child-C").nextSibling;<br><br>
+
+                console.log(a);
+            </p>
+        </div>
+        <h2>JS Create & TextNode</h2>
+        <div class="ex">
+            <p>
+                //var newElement = document.createElement("p");<br><br>
+
+                var newElement = document.createElement("h2");<br><br>
+
+                console.log(newElement);<br><br>
+
+                var newText = document.createTextNode("This is just text");<br><br>
+
+                console.log(newText);<br><br>
+
+                /* Dom Create Comment*/<br><br>
+
+                var newComment = document.createComment("this is comment");<br><br>
+
+                console.log(newComment);
+            </p>
+        </div>
+        <h2>JS AppendChild & InsertBefore</h2>
+        <div class="ex">
+            <p>
+                <b> The appendChild() </b> method appends a node (element) as the last child of an element.
+            </p>
+            <p>syntex { <br>
+                element.appendChild(node) <br>
+                or <br>
+                node.appendChild(node) } <br>
+            </p>
+            <p>
+                <b>The insertBefore() </b> method inserts a child node before an existing child.
+            </p>
+            <p> syntex { <br>
+                element.insertBefore(new, existing) <br>
+                or <br>
+                node.insertBefore(new, existing) } <br>
+            </p>
+            <p>
+                /* Dom Create */ <br><br>
+                //var newElement = document.createElement("p");<br><br>
+
+                var newElement = document.createElement("h2");<br><br>
+
+                console.log(newElement);<br><br>
+
+                var newText = document.createTextNode("This is just text");<br><br>
+
+                console.log(newText);<br><br>
+
+                /* JavaScript AppendChild*/<br><br>
+
+                newElement.appendChild(newText);<br><br>
+
+                //document.getElementById("test").appendChild(newElement);<br><br>
+
+
+                /* JavaScript InsertBefore */<br><br>
+
+                var target = document.getElementById("test");<br><br>
+                target.insertBefore(newElement,target.childNodes[0])
+            </p>
+        </div>
+        <h2>JS Insert</h2>
+        <h3>insertAdjacentElement() </h3>
+        <p>
+            The insertAdjacentElement() method inserts a an element into a specified position. <br><br>
+            syntex :- {<br><br>element.insertAdjacentElement(position, element) <br><br>
+            or<br><br>
+            node.insertAdjacentElement(position, element) }
+        </p>
+        <p>
+            // insertAdjacentElement Method <br><br>
+
+            var newElement = document.createElement("h2");<br><br>
+
+            var newText = document.createTextNode("This is just element");<br><br>
+
+            newElement.appendChild(newText);<br><br>
+
+            var target = document.getElementById("test");<br><br>
+
+            target.insertAdjacentElement("afterbegin",newElement);
+        </p>
+        <h3>insertAdjacentHTML()</h3>
+        <div>
+            <p>
+                The insertAdjacentHTML() method inserts HTML code into a specified position. </p>
+            <p class="ex">
+                syntex : - { <br><br>
+                element.insertAdjacentHTML(position, html) <br><br>
+                or<br><br>
+                node.insertAdjacentHTML(position, html) }
+            </p>
+
+            <p class="ex">
+                // insertAdjacentHTML Method <br><br>
+
+                var newElement ="&lt;h2&gt;This is just Html&lt;/h2&gt;"; <br><br>
+
+                var target = document.getElementById("test");<br><br>
+
+                target.insertAdjacentHTML("afterend",newElement);
+            </p>
+
+            <p class="ex">
+                insertAdjacentText Method<br><br>
+
+                var newText = "&lt;h2&gt; This is just Text &lt;/h2&gt;"; <br><br>
+
+
+                var target = document.getElementById("test"); <br><br>
+
+                target.insertAdjacentHTML("beforeend",newText);
+            </p>
+        </div>
+
+        <h2>JS ReplaceChild & RemoveChild</h2>
+        <p>The replaceChild() method replaces a child node with a new node. </p>
+        <p class="ex"> syntex : - node.replaceChild(newnode, oldnode)</p>
+        <p class="ex">
+            /*JavaScript ReplaceChild*/ <br><br>
+
+            /*var newElement = document.createElement("li");<br><br>
+
+            var newText = document.createTextNode("WOW new Text");<br><br>
+
+            newElement.appendChild(newText);<br><br>
+
+            var target = document.getElementById("list");<br><br>
+
+            var oldElement = target.children[0];*/<br><br>
+
+            //console.log(oldElement);<br><br>
+
+            //target.replaceChild(newElement,oldElement);<br><br>
+
+            /*JavaScript RemoveChild*/<br><br>
+
+            var target = document.getElementById("list");<br><br>
+
+            var oldElement = target.children[1];
+        </p>
+        <!-- ................errrrr............................. -->
+        <h2>JS cloneNode</h2>
+        <p class="ex">
+            ................errrrr.............................
+            <!--  -->
+            The cloneNode() method creates a copy of a node, and returns the clone. <br><br>
+
+            The cloneNode() method clones all attributes and their values.
+            <br><br>
+
+            Syntex : - <br><br>
+            node.cloneNode(deep)
+        </p>
+        <p class="ex">
+            /* JavaScript CloneNode*/ <br><br>
+
+            var target = document.getElementById("list1").children[0];<br><br>
+
+            var copyElement = target.cloneNode(true);<br><br>
+
+            console.log(copyElement);<br><br>
+
+            document.getElementById("list2").appendChild(copyElement);<br><br>
+
+            document.getElementById("test").appendChild(copyElement);
+        </p>
+
+        <h2>JS Contains</h2>
+        <p class="ex">
+            The contains() method returns true if a node is a descendant of a node. <br><br>
+
+            The contains() method returns false if not. <br><br>
+            Syntex : - <br><br>
+            node.contains(node)
+        </p>
+        <p class="ex">
+            /* JavaScript Contains Method*/ <br><br>
+
+            var parentElement = document.getElementById("test");<br><br>
+
+            var target = document.getElementById("abc");<br><br>
+
+            var find = parentElement.contains(target);<br><br>
+
+            console.log(find);
+        </p>
+        <h2>JS Has </h2>
+        <p>
+            1. The hasAttribute() method returns true if the attribute exists, otherwise false.
+        </p>
+        <p>
+            2. The hasChildNodes() method returns true if the specified node has any child nodes, otherwise false. <br>
+            The
+            hasChildNodes() method is read-only.
+        </p>
+        <p class="ex">
+            /* JavaScript hasAttribute*/ <br><br>
+
+            var target = document.getElementById("test");<br><br>
+
+            var find = target.hasAttribute("class");<br><br>
+
+            console.log(find);<br><br>
+
+
+            /* JavaScript hasChildNodes*/<br><br>
+
+            var target = document.getElementById("test");<br><br>
+
+            var find = target.hasChildNodes();<br><br>
+
+            console.log(find);
+        </p>
+
+        <h2>JS IsEqualNode</h2>
+        <p class="ex">
+            The isEqualNode() returns true if two elements (or nodes) are equal. <br><br>
+            Syntex : - element.isEqualNode(node) <br>
+            or <br>
+            node.isEqualNode(node)
+        </p>
+        <p class="ex">
+            var target1 = document.getElementById("list-1").firstElementChild;<br><br>
+
+            var target2 = document.getElementById("list-2").children[1];<br><br>
+
+            var equal = target1.isEqualNode(target2);<br><br>
+
+            console.log(equal);
+        </p>
+    </div>
+</body>
+
+</html>
