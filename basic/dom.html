@@ -23,6 +23,11 @@
             padding: 20px;
         }
 
+        .ex-1 {
+            background-color: rgb(229, 213, 213);
+            padding: inherit;
+        }
+
         .image {
             margin: auto;
             width: 90%;
@@ -199,9 +204,14 @@
                     (1). Style object (style attribute). <br><br>
                     (2). ClassName object (class attribute). <br><br>
                     (3). classList :- It has two method are following... <br><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (i). Add method (ii). Remove method classList <br><br>
-                    (target.classList.add("abc",xyz)); <br><br>
-                    (target.classList.remove("abc",xyz));
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (i). Add method (ii).
+                    Remove method classList <br><br>
+                    <div class="ex-1">
+                        let target = document.getElementById("#header"); <br><br>
+                        (target.classList.add("abc",xyz)); <br><br>
+                        (target.classList.remove("abc",xyz));
+                    </div>
                 </b>
             </p>
             <p>var element;</p>
@@ -220,22 +230,69 @@
             </ul>
             <p> console.log(element);</p>
         </div>
-        <h2>JS AddEventListener Method</h2>
+        <h2>AddEventListener Method</h2>
         <div class="ex">
-            <ul>
-                <li>onclick event//
-                    document.getElementById("header").onclick = abc;</li>
-                <li>onmouseenter event
-                    //document.getElementById("header").onmouseenter = abc;</li>
-                <p><b>with addEventListener</b></p>
-                <li> document.getElementById("header").addEventListener("mouseenter",abc);
-                    document.getElementById("header").addEventListener("click", function(){
-                    document.getElementById("header").style.border = "10px solid red";
-                    });</li>
-                <p><b>with removeEventListene</b></p>
+            <p><b>Assign event using the DOM.</b></p>
+            <div class="ex-1">
+                <li>
+                    onclick event // When i click header change background.<br>
+                    document.getElementById("header").onclick = abc;
+                </li>
+                <li>
+                    onmouseenter event <br>
+                    document.getElementById("header").onmouseenter = abc;
+                </li>
+                <p>
+                    function abc(){ <br>
+                    document.getElementById("header").style.background="lightblue" <br>
+                    }
+                </p>
+            </div>
+            <p>AddEventListener / RemoveEventListene</p>
+            <div class="ex-1">
+                <li>addEventListener("eventName", funcName, capture);</li>
+                <li>eventName : click, bdlclick, mouseenter...</li>
+                <li>funcName : abc, xyz...</li>
+                <li>
+                    Capture : optional parameter by default false. (true/false). <br>
+                    <ul>
+                        <li>true :- outer than inner div call. (capturing phase) </li>
+                        <li>false :- inner than ourer div call. (bubbling phase)</li>
+                    </ul>
+                </li>
+            </div>
+            <p><b>with addEventListener</b></p>
+            <div class="ex-1">
+                <li>
+                    document.getElementById("header").addEventListener("mouseenter",abc); <br> <br>
+                    <span style="display:block;text-align: center;">OR</span> <br>
+                    document.getElementById("header").addEventListener("click", function(){ <br>
+                    document.getElementById("header").style.backgroundColor = "green"; <br>
+                    });
+                </li>
+            </div>
+
+            <p><b>with removeEventListene</b></p>
+            <div class="ex-1">
                 <li>document.getElementById("header").removeEventListener('mouseleave',abc);</li>
-                <li>document.getElementById("header").addEventListener("click",xyz);</li>
-            </ul>
+                <li>document.getElementById("header").addEventListener("click",xyz);</li> <br>
+                <p style="border: 1px solid; padding: 10px;">
+                    &lt;p id="demo"&gt;I am &lt;br&gt; Background &lt;/p &gt; <br><br>
+
+                    &lt;button onclick="removeHandler()"&gt;Remove&lt;/button&gt; <br><br>
+                    const myHead = document.getElementById("header"); <br> <br>
+                    myHead.addEventListener("mousemove", myFunction); <br>
+                    <br>
+                    function removeFunction() { <br>
+                    myHead.removeEventListener("mousemove", myFunction); <br>
+                    } <br>
+                    <br>
+                    function myFunction() { <br>
+                    document.getElementById("demo").style.background = `#${Math.ceil(Math.random()*1000000)}` <br>
+                    } <br>
+                </p>
+            </div>
+
         </div>
         <h2>JS classList Methods</h2>
         <p>
@@ -248,56 +305,90 @@
             the class elements:
         </p>
         <div class="ex">
+            <div class="ex-1">
+                <ul>
+                    <li><b>add()</b>: The add() method is used for adding one or more classes to the element.</li>
+                    <li><b>remove()</b>: The remove() method is used for removing one or more classes from the number of
+                        classes
+                        present in
+                        the element.</li>
+                    <li><b>toggle()</b>: The toggle() method is used for toggling the specified class names of an
+                        element.
+                        It
+                        means on
+                        one
+                        click the specified class gets added and on another click the class gets removed. It is known as
+                        the
+                        toggle
+                        property of an element.</li>
+                    <li><b>replace()</b>: The replace() method is used for replacing an existing class with a new class.
+                    </li>
+                    <li><b>contains()</b>: The contains() method of the JavaScript classList property is used for
+                        returning
+                        the
+                        Boolean
+                        value as an output. If the class is present, the value is returned as true otherwise false is
+                        returned.
+                    </li>
+                    <li><b>item()</b>: The item() method is used for displaying the name of the classes at the
+                        particular
+                        index.
+                        Thus,
+                        it
+                        returns the class name.</li>
+                </ul>
+            </div>
+            <h4>Example :-</h4>
+            <div class="ex-1">
+                <p>
+                    <b> document.getElementById("header").addEventListener("click", abc);</b>
+                    <br><br>
+                    function abc() {<br>
+                    &nbsp;&nbsp; document.getElementById("header").classList.add("xyz","efg"); <br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp; //document.getElementById("header").classList.remove("xyz"); <br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp; //var a = document.getElementById("header").classList.length; <br> <br>
+
+                    &nbsp;&nbsp; //document.getElementById("header").classList.toggle("xyz"); <br> <br>
+
+                    &nbsp;&nbsp; //var a = document.getElementById("header").classList; <br> <br>
+
+                    &nbsp;&nbsp; //var a = document.getElementById("header").classList.item(0); <br> <br>
+
+                    &nbsp;&nbsp; //var a = document.getElementById("header").classList.contains("first"); <br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp; console.log(a);<br>
+                    }
+                </p>
+            </div>
+        </div>
+
+        <h2>DOM Transversal method</h2>
+        <div class="ex">
+            <p>
+                DOM traversal is a fundamental concept in JavaScript for web development. It involves navigating and
+                manipulating the Document Object Model (DOM), which represents the structured hierarchy of elements in
+                an HTML document.
+            </p>
+            <img src="../js-image/domtransvesalmethod.png" alt="" class="image"> <br><br>
+            <img src="../js-image/domtransversal1.webp" alt="" class="image">
             <ul>
-                <li><b>add()</b>: The add() method is used for adding one or more classes to the element.</li>
-                <li><b>remove()</b>: The remove() method is used for removing one or more classes from the number of
-                    classes
-                    present in
-                    the element.</li>
-                <li><b>toggle()</b>: The toggle() method is used for toggling the specified class names of an element.
-                    It
-                    means on
-                    one
-                    click the specified class gets added and on another click the class gets removed. It is known as the
-                    toggle
-                    property of an element.</li>
-                <li><b>replace()</b>: The replace() method is used for replacing an existing class with a new class.
-                </li>
-                <li><b>contains()</b>: The contains() method of the JavaScript classList property is used for returning
-                    the
-                    Boolean
-                    value as an output. If the class is present, the value is returned as true otherwise false is
-                    returned.
-                </li>
-                <li><b>item()</b>: The item() method is used for displaying the name of the classes at the particular
-                    index.
-                    Thus,
-                    it
-                    returns the class name.</li>
+                <li>parentNode</li>
+                <li>parentElement</li>
+                <li>childNodes</li>
+                <li>children</li>
+                <li>firstChild</li>
+                <li>firstElementChild</li>
+                <li>lastChild</li>
+                <li>lastElementChild</li>
+                <li>nextSibling</li>
+                <li>nextElementSibling</li>
+                <li>previousSibling</li>
+                <li>previousElementSibling</li>
             </ul>
         </div>
 
-        <p class="ex">
-            <b> document.getElementById("header").addEventListener("click", abc);</b>
-            <br><br>
-            function abc() {<br>
-            &nbsp;&nbsp; document.getElementById("header").classList.add("xyz","efg"); <br>
-            &nbsp;&nbsp; <br>
-            &nbsp;&nbsp; //document.getElementById("header").classList.remove("xyz"); <br>
-            &nbsp;&nbsp; <br>
-            &nbsp;&nbsp; //var a = document.getElementById("header").classList.length; <br> <br>
-
-            &nbsp;&nbsp; //document.getElementById("header").classList.toggle("xyz"); <br> <br>
-
-            &nbsp;&nbsp; //var a = document.getElementById("header").classList; <br> <br>
-
-            &nbsp;&nbsp; //var a = document.getElementById("header").classList.item(0); <br> <br>
-
-            &nbsp;&nbsp; //var a = document.getElementById("header").classList.contains("first"); <br>
-            &nbsp;&nbsp; <br>
-            &nbsp;&nbsp; console.log(a);<br>
-            }
-        </p>
         <h2>JS Parent Method</h2>
         <p>The parentNode property returns the parent node of an element or node.</p>
         <p>The parentNode property is read-only.</p>
@@ -405,12 +496,20 @@
                 console.log(a);
             </p>
         </div>
+        <hr>
         <h2>JS Create & TextNode</h2>
+        <p>
+            <b>
+                &bull; (1). CreateElement("p").<br> <br>
+                &bull; (2). CreateTextNode("This is text"). <br> <br>
+                &bull; (3). CreateComment("This is comment"). <br>
+            </b>
+        </p>
         <div class="ex">
             <p>
-                //var newElement = document.createElement("p");<br><br>
+                var newTag = document.createElement("p");<br><br>
 
-                var newElement = document.createElement("h2");<br><br>
+                var newText = document.createElement("h2");<br><br>
 
                 console.log(newElement);<br><br>
 
@@ -468,31 +567,61 @@
                 target.insertBefore(newElement,target.childNodes[0])
             </p>
         </div>
-        <h2>JS Insert</h2>
-        <h3>insertAdjacentElement() </h3>
-        <p>
-            The insertAdjacentElement() method inserts a an element into a specified position. <br><br>
-            syntex :- {<br><br>element.insertAdjacentElement(position, element) <br><br>
-            or<br><br>
-            node.insertAdjacentElement(position, element) }
-        </p>
-        <p>
-            // insertAdjacentElement Method <br><br>
-
-            var newElement = document.createElement("h2");<br><br>
-
-            var newText = document.createTextNode("This is just element");<br><br>
-
-            newElement.appendChild(newText);<br><br>
-
-            var target = document.getElementById("test");<br><br>
-
-            target.insertAdjacentElement("afterbegin",newElement);
-        </p>
-        <h3>insertAdjacentHTML()</h3>
+        <hr>
         <div>
+            <h2>JavaScript insertAdjacentElement() and insertAdjacentHTML() and insertAdjacentText()</h2>
+            <div class="table-1">
+                <table border="1">
+                    <tr>
+                        <th>Value (position)</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>afterbegin</td>
+                        <td>After the beginning of the element (first child)</td>
+                    </tr>
+                    <tr>
+                        <td>afterend</td>
+                        <td>After the element</td>
+                    </tr>
+                    <tr>
+                        <td>beforebegin</td>
+                        <td>Before the element</td>
+                    </tr>
+                    <tr>
+                        <td>beforeend</td>
+                        <td>Before the end of the element (last child)</td>
+                    </tr>
+                </table>
+            </div>
+            <h3>insertAdjacentElement() </h3>
+            <p class="ex">
+                The insertAdjacentElement("afterend", new) method inserts a an element into a specified position.
+                <br><br>
+                syntex :- {<br><br>element.insertAdjacentElement(position, element) <br><br>
+                or<br><br>
+                node.insertAdjacentElement(position, element) }
+            </p>
+            <p class="ex">
+                // insertAdjacentElement Method <br><br>
+
+                var newElement = document.createElement("h2");<br><br>
+
+                var newText = document.createTextNode("This is just element");<br><br>
+
+                newElement.appendChild(newText);<br><br>
+
+                var target = document.getElementById("test");<br><br>
+
+                target.insertAdjacentElement("afterbegin",newElement);
+            </p>
+            <hr>
+            <!-- ................................................................. -->
+            <h3>insertAdjacentHTML()</h3>
+
             <p>
-                The insertAdjacentHTML() method inserts HTML code into a specified position. </p>
+                The insertAdjacentHTML("afterend", new) method inserts HTML code into a specified position.
+            </p>
             <p class="ex">
                 syntex : - { <br><br>
                 element.insertAdjacentHTML(position, html) <br><br>
@@ -511,16 +640,17 @@
             </p>
 
             <p class="ex">
-                insertAdjacentText Method<br><br>
+                insertAdjacentText("afterend", new) Method<br><br>
 
-                var newText = "&lt;h2&gt; This is just Text &lt;/h2&gt;"; <br><br>
-
+                var newText = "This is just Text"; <br><br>
 
                 var target = document.getElementById("test"); <br><br>
 
                 target.insertAdjacentHTML("beforeend",newText);
             </p>
         </div>
+        <hr>
+        <!-- ...................................................................... -->
 
         <h2>JS ReplaceChild & RemoveChild</h2>
         <p>The replaceChild() method replaces a child node with a new node. </p>
@@ -548,10 +678,10 @@
 
             var oldElement = target.children[1];
         </p>
-        <!-- ................errrrr............................. -->
+        <hr>
+        <!-- ................................................... -->
         <h2>JS cloneNode</h2>
         <p class="ex">
-            ................errrrr.............................
             <!--  -->
             The cloneNode() method creates a copy of a node, and returns the clone. <br><br>
 
@@ -574,6 +704,8 @@
 
             document.getElementById("test").appendChild(copyElement);
         </p>
+        <hr>
+        <!-- ...................................................................... -->
 
         <h2>JS Contains</h2>
         <p class="ex">
@@ -594,6 +726,8 @@
 
             console.log(find);
         </p>
+        <hr>
+        <!-- ...................................................................... -->
         <h2>JS Has </h2>
         <p>
             1. The hasAttribute() method returns true if the attribute exists, otherwise false.
@@ -621,7 +755,8 @@
 
             console.log(find);
         </p>
-
+        <hr>
+        <!-- ................................................................................ -->
         <h2>JS IsEqualNode</h2>
         <p class="ex">
             The isEqualNode() returns true if two elements (or nodes) are equal. <br><br>

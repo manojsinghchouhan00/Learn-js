@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>DOM Layout</title>
     <style>
         * {
             box-sizing: border-box;
@@ -43,8 +43,13 @@
             padding: 10px;
             float: left;
             /* width: 40%; */
-            min-height:460px;
+            min-height: 460px;
 
+        }
+
+        #main .sidenav {
+            width: 20%;
+            margin-right: 2px;
         }
 
         #main .sidebar a {
@@ -62,16 +67,26 @@
             float: right;
             /* max-height: 70px; */
         }
-        
+
         #footer {
             background-color: antiquewhite;
             padding: 10px;
             text-align: center;
-            overflow: hidden;
-            position: fixed;
+            /* overflow: hidden; */
+            clear: both;
+            /* position: fixed;
             bottom: 0;
             left: 0;
-            right: 0;
+            right: 0; */
+        }
+
+        @media screen and (max-width:500px) {
+            #main .sidebar {
+                width: 100%;
+                margin-bottom: 2px;
+                max-height: auto;
+
+            }
         }
     </style>
 </head>
@@ -88,7 +103,7 @@
             <div class="nav"><a href="">Home</a></div>
             <div class="nav"><a href="">Home</a></div>
         </div>
-        <div class="sidebar" style="width: 20%;margin-right: 2px;">
+        <div class="sidebar sidenav">
             <a href="">Home</a>
             <a href="">Home</a>
             <a href="">Home</a>
@@ -103,10 +118,33 @@
             Debitis aliquid itaque, distinctio quod nulla eveniet autem ad sapiente pariatur esse magnam illum quae
             tempora facilis delectus obcaecati? Aliquam omnis odio placeat quam, eveniet voluptas tempora voluptates?
         </div>
-        <div id="footer" >
-           <h1> I am footer</h1>
+        <div id="footer">
+            <h1> I am footer</h1>
         </div>
     </div>
+    <style>
+        .abc {
+            color: blue;
+        }
+
+        .jjj {
+            background-color: brown;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-variant: small-caps;
+        }
+    </style>
+
+    <script>
+        // let a = document.getElementsByClassName("sidebar")[0].innerText ="Address"
+        var a = document.getElementsByTagName("div")
+        for (let i = 0; i < a.length; i++) {
+
+             a[i].setAttribute("style", "background:red")
+            //  a[5].setAttribute("style", "background:red")
+
+            // console.log("Header id target :-", a[0])
+        }
+    </script>
 </body>
 
 </html>
