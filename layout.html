@@ -10,6 +10,8 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
+            text-align: justify;
+            word-break: break-all;
         }
 
         body {
@@ -68,7 +70,7 @@
             /* max-height: 70px; */
         }
 
-        #footer {
+        #footer h1 {
             background-color: antiquewhite;
             padding: 10px;
             text-align: center;
@@ -118,32 +120,40 @@
             Debitis aliquid itaque, distinctio quod nulla eveniet autem ad sapiente pariatur esse magnam illum quae
             tempora facilis delectus obcaecati? Aliquam omnis odio placeat quam, eveniet voluptas tempora voluptates?
         </div>
-        <div id="footer">
-            <h1> I am footer</h1>
+        <div id="footer" class="one">
+            <h1 onclick="abc(10)"> I am footer</h1>
         </div>
     </div>
-    <style>
-        .abc {
-            color: blue;
-        }
 
-        .jjj {
-            background-color: brown;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-variant: small-caps;
-        }
-    </style>
 
     <script>
-        // let a = document.getElementsByClassName("sidebar")[0].innerText ="Address"
-        var a = document.getElementsByTagName("div")
-        for (let i = 0; i < a.length; i++) {
 
-             a[i].setAttribute("style", "background:red")
-            //  a[5].setAttribute("style", "background:red")
 
-            // console.log("Header id target :-", a[0])
-        }
+
+        // let n = "name";
+        // var obj = {
+        //     [n]: "Vijay singh",
+        //     course: "Btech",
+        //     detail() {
+        //         return `${this.name} is student of ${this.course}`;
+        //     }
+        // };
+
+        // console.log(obj.name)
+        // console.log(obj[n])
+
+
+        // let name = 'student';
+        // var obj = {
+        //     [name + "name"]: "Vijay singh",
+        //     course: "Btech",
+        //     detail() {
+        //         return `${this.studentname} is student of ${this.course}`;
+        //     }
+        // };
+        // console.log(obj.studentname)
+        // console.log(obj[name + "name"])
+
     </script>
 </body>
 

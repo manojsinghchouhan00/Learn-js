@@ -8,7 +8,10 @@
     <style>
         * {
             box-sizing: border-box;
-            word-wrap: break-word;
+            text-align: justify;
+        }
+        *:not(h1,h2,h3){
+            font-size: 22px;
         }
 
         .ex {
@@ -100,8 +103,11 @@
             console.log(myFuncVar("Jayesh", 30)); <br>
         </p>
         <hr>
+        <!-- <h2>Rest and spread operator</h2>
+        <p>The spread operator takes an array or object and breaks it into pieces. And the rest operator a takes leftover pieces and puts them in an array or object.</p> -->
         <!-- Rest operator -->
         <h1>Rest operator</h1>
+        <p> Rest parameters are used to create functions that accept any number of arguments. · The spread syntax is used to pass an array to functions as parameter.</p>
         <p class="ex">
             function sum(name, ...args){ <br>
             console.log(arguments); <br>
@@ -120,6 +126,7 @@
         <hr>
         <!--  Spread operator -->
         <h1>Spread operator</h1>
+        <p>The JavaScript spread operator ( ... ) allows us to quickly copy all or part of an existing array or object into another array or object.</p>
         <p class="ex">
             function sum(name,...args){ <br>
             console.log(arguments); <br>

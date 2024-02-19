@@ -1,47 +1,3 @@
-let name1 = "Akash shrivas jay";
-console.log("name1 ", name1)
-// console.log("Name.length ", name1.length)
-// console.log("Name.length ", name1.slice(2))
-// console.log("Name.length ", name1.slice(2,5))
-// console.log("Name.substring ", name1.substring(2,5))
-// console.log("Name.substring ", name1.replace("h","#"))
-// console.log("Name.substring ", name1.replaceAll("h","#"))
-// console.log("Name.concat ", name1.concat(" jay bharat"))
-// console.log("Name.concat ", name1.concat(" jay ","bharat"))
-
-// console.log("Name.concat",name1.trim())
-
-// console.log("Name.length ", name1.length)
-// console.log("Name.length ", name1.charAt(6))
-
-// console.log("Name.length ", name1.charCodeAt("A"))
-
-
-// console.log("Name.length ", name1.split("h"))
-
-// console.log("Name.length ", name1.includes("ash"))
-
-
-// for (let i = 0; i < array.length; i++) {
-// console.log(first)    
-// }
-
-
-// let i =0;
-// while (condition) {
-//     console.log(first)
-//     i++;
-// }
-
-
-
-// let i =0;
-// do {
-//     console.log(first)
-//     i++;
-// } while (condition);
-
-
 // let day = 9;
 // switch (day) {
 //     case 1:
@@ -65,9 +21,6 @@ console.log("name1 ", name1)
 // }
 
 
-// name1 = name1.split("").reverse().join("").split(" ").reverse().join(" ");
-
-
 // let name2 = name1.split("").reverse().join("").split(" ").reverse().join(" ")
 // console.log(name2); // Outputs "yaj vasirhs hsakA"
 
@@ -82,40 +35,78 @@ console.log("name1 ", name1)
 // }
 // console.log(arr.join(""))
 
-const arr1 = [4, 5, 2, 1, 5];
 
-const arr2 = [
-    [], [], [], []
-];
+// class Animal {
+//     constructor() {
+//         console.log("constructore")
+//     }
+//     makeSound() {
+//         console.log("Generic animal sound");
+//     }
+// }
+
+// class Dog extends Animal {
+//     constructor() {
+//         super();
+//         console.log("constructore 2")
+//     }
+//     makeSound() {
+//         console.log("Woof!"); // Overriding the inherited method
+//     }
+// }
+
+// const dog = new Dog();
+// dog.makeSound(); // Output: Woof!
 
 
-const arr3 = [
-    [
-        [], [], [], []
-    ],
-];
 
+// class Calculator {
+//     function add( a:Number,  b:Number):Number {
+//        return a + b;
+//     }
 
-const arr4 = [
-    [
-        [
-            [1, 2], [3, 4], [5, 6,
-                [
-                    7, 8,
-                    [9]
-                ]
-            ],
-            [11, 12]
-        ]
-    ]
-];
+//      add( a,  b) {
 
-console.log("first", arr4[0][0][3][1])
-const arrmulti = [
-    [
-        [], []]
-    , [
-        [], [], [
-            [], [], []
-        ]], [], []
-];
+//        return "i am String "+ a +" " + b;
+//     }
+
+//     //  add(String a, String b) {
+//     //    return a + b;
+//     // }
+//  }
+
+//  let a = new Calculator();
+
+//  let b = a.add(4,6)
+
+//  console.log(b)
+
+let day = 89;
+
+switch (day) {
+    case 0:
+        console.log("Sunday")
+        break;
+    case 1:
+        console.log("Monday")
+        break;
+    case 2:
+        console.log("Tuesday")
+        break;
+    case 3:
+        console.log("Wednesday")
+        break;
+    case 4:
+        console.log("Thursday")
+        break;
+    case 5:
+        console.log("Friday")
+        break;
+    case 6:
+        console.log("Saturday")
+        break;
+
+    default:
+        console.log("Enter valid day")
+        break;
+}

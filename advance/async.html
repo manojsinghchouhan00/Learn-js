@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async & Await</title>
+</head>
+
+<body>
+    <div class="main">
+        <h2>Callback function</h2>
+        <p>
+            A callback is a function passed to another function as an argument it’s called callback function. <br><br>
+            A callback function can run after another function has finished.
+        </p>
+    </div>
+    <hr>
+    <div id="demo"></div>
+    <script>
+        // sequance of a function ???
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+            console.log(some)
+        }
+
+        function myFirst() {
+            myDisplayer("Hello");
+        }
+
+        function mySecond() {
+            myDisplayer("Goodbye");
+        }
+        
+        myFirst();
+        mySecond();
+    </script>
+</body>
+
+</html>

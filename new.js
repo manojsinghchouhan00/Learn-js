@@ -86,36 +86,36 @@
 // .................inheritance ................//
 
 
-class person {
-    constructor(name) {
-        this.name = name;
-        console.log("person constructor");
-    }
-    // method to return the string
-    simplFunc() {
-        console.log("person simplFunc");
+// class person {
+//     constructor(name) {
+//         this.name = name;
+//         console.log("person constructor");
+//     }
+//     // method to return the string
+//     simplFunc() {
+//         console.log("person simplFunc");
 
-        return (`Name of person: ${this.name}`);
-    }
-}
+//         return (`Name of person: ${this.name}`);
+//     }
+// }
 
 
-class student extends person {
-    constructor(name, id) {
-        // super keyword for calling the above
-        // class constructor
-        super(name);
-        this.id = id;
-        console.log("student constructor");
+// class student extends person {
+//     constructor(name, id) {
+//         // super keyword for calling the above
+//         // class constructor
+//         super(name);
+//         this.id = id;
+//         console.log("student constructor");
 
-    }
-    simplFunc() {
-        console.log("student simplFunc");
+//     }
+//     simplFunc() {
+//         console.log("student simplFunc");
         
-        return (`${super.simplFunc()},
-		Student ID: ${this.id}`);
-    }
-}
+//         return (`${super.simplFunc()},
+// 		Student ID: ${this.id}`);
+//     }
+// }
 
 // let p1 = new person("Rahul");
 // console.log(p1.name)
@@ -125,3 +125,6 @@ class student extends person {
 let student1 = new student('Mukul', 22);
 // console.log(student1)
 console.log(student1.simplFunc());
+
+
+

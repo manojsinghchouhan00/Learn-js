@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Display</h1>
+    <div id="demo"></div>
+    <script>
+        let arr = [
+            { name: "jay", age: 50, email: "jay@gmail.com" },
+            { name: "viru", age: 60, email: "viru@gmail.com" },
+            { name: "jay", age: 50, email: "jay@gmail.com" },
+            { name: "viru", age: 60, email: "viru@gmail.com" },
+            { name: "jay", age: 50, email: "jay@gmail.com" },
+            { name: "viru", age: 60, email: "viru@gmail.com" },
+            { name: "jay", age: 50, email: "jay@gmail.com" },
+            { name: "viru", age: 60, email: "viru@gmail.com" },
+            { name: "jay", age: 50, email: "jay@gmail.com" },
+            { name: "viru", age: 60, email: "viru@gmail.com" },
+            { name: "jay", age: 50, email: "jay@gmail.com" },
+            { name: "viru", age: 60, email: "viru@gmail.com" }
+        ];
+
+        let text = "<table border='1' width='100%'> <tr><th>S. No.</th><th>Name</th><th>Age</th><th>Email</th></tr>";
+
+        arr.map((item, i) => {
+            text += `<tr><td>${i+1}</td><td>${item.name}</td><td>${item.age}</td><td>${item.email}</td></tr>`
+        })
+        // console.log(item.name)
+
+
+        text = text + "</table>";
+
+        //    let a = document.getElementById("demo").innerHTML="<h1>"+arr[0]+"</h1>"
+        //    let a = document.getElementById("demo").innerHTML=`<h1>${arr[0]}</h1>`
+        let a = document.getElementById("demo").innerHTML = text;
+
+        console.log(a)
+    </script>
+</body>
+
+</html>

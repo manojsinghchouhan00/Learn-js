@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON FORMATE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .main {
+            width: 99%;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .ex {
+            background-color: rgba(240, 237, 244, 0.83);
+            padding: 20px;
+        }
+
+        .ex-1 {
+            background-color: rgb(229, 213, 213);
+            padding: inherit;
+        }
+
+        .image {
+            margin: auto;
+            width: 90%;
+        }
+
+        .table-1 {
+            overflow-x: auto
+        }
+
+        .table-1 td,
+        th {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>JSON OBJECT</h1>
+        <div class="ex">
+            JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on
+            JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some
+            data from the server to the client, so it can be displayed on a web page, or vice versa). <br><br>
+            <p class="ex-1">
+                <b>JSON.parse() :-</b> <br>
+                JavaScript has a built in function for converting JSON strings into JavaScript objects. <br>
+                let myJSON = '{"name" :"jay","age":30,"email":"jay@gmail.com"}'; <br>
+                let obj = JSON.parse(text) <br>
+                document.wright(obj.name); // outpot:- jay
+                document.wright(obj); // outpot:-  [object Object]
+            </p>
+
+            <p class="ex-1">
+                <b>JSON.stringify() :-</b> <br>
+                JavaScript also has a built in function for converting an object into a JSON string. <br>
+                let obj = {name: "John", age: 30, city: "New York"}; <br>
+                let myJSON = JSON.stringify(obj); <br>
+                document.wright(myJSON); <br> // output :- {name: "John", age: 30, city: "New York"}
+
+            </p>
+            <p class="ex-1">
+                JSON OBJECT :- {"fname":"John" , "lname":"John"} // fileName.json
+            </p>
+            <p class="ex-1">
+                JS OBJECT :- let obj = {fname:"John" ,lname :'Chouhan'} <br>
+                // call :- obj.name or obj["name"]
+            </p>
+            <p class="ex-1">
+                <b>JSON Values :-</b> <br> <br>
+                values must be one of the following data types: <br>
+                <br>
+                &bull; a string <br>
+                &bull; a number <br>
+                &bull; an object <br>
+                &bull; an array <br>
+                &bull; a boolean <br>
+                &bull; null <br><br>
+                <b>JavaScript object values :-</b> <br> <br>
+                values must be one of the following data types:<br>
+                <br>
+                &bull; a string <br>
+                &bull; a number <br>
+                &bull; an object <br>
+                &bull; an array <br>
+                &bull; a boolean <br>
+                &bull; null <br>
+                &bull; a function <br>
+                &bull; a date <br>
+                &bull; undefined <br>
+            </p>
+            <p class="ex-1">
+                JSON Files <br><br>
+                File type for JSON files is ".json" <br>
+                MIME type for JSON text is "application/json" <br>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
